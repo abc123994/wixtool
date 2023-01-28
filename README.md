@@ -1,5 +1,5 @@
 # wixtool
-package tool example
+example package tool 
 
 1. install wix extension for visual studio
 2. install wix toolset for workstation
