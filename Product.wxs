@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="baha" Language="1033" Version="1.0.0.0" Manufacturer="demo" UpgradeCode="48a25357-5ef3-454e-8736-9c9d423ec74c">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+		<MediaTemplate />
+		<Feature Id="ProductFeature" Title="baha" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			
+		<ComponentRef Id="ApplicationShortcut" />   
+
+		</Feature>
+	</Product>
+
+	<Fragment>
+	
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="baha" />
+			</Directory>
+			<Directory Id="ProgramMenuFolder">
+				<Directory Id="ApplicationProgramsFolder" Name="baha"/>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="INSTALLFOLDER">
+		
+			<Directory Id="dir655E50E5ABDD0F7183A54CFA0F822CE2" Name="plugins" />
+			<Directory Id="dir09903639A005C2D197EB19C866CDE8EB" Name="resources" />
+			<Directory Id="dir83B71B3CD0F995692A90933430D9448A" Name="translations" />
+			
+		</DirectoryRef>
+		
+	</Fragment>
+	<Fragment>
+		<ComponentGroup Id="ProductComponents">
+			
+			<Component Id="cmpAC13A2668A868BDFA1A7FC1A28181418" Directory="INSTALLFOLDER" Guid="{3859CBE8-F1E8-4428-A140-FD35D4CDCC47}">
+				<File Id="fil2D3028BACD37718A4C5E3DDA813A09D1" KeyPath="yes" Source="items\ani.exe" />
+				
+			</Component>
+			<Component Id="cmp7CB339279114B3F8F7E54AD864209BD9" Directory="INSTALLFOLDER" Guid="{135ABE81-1F2F-493D-AA18-9360733D337C}">
+				<File Id="fil7DB12F28E1764F1CCC0716876D4ADEE3" KeyPath="yes" Source="items\config.ini" />
+			</Component>
+			<Component Id="cmp02DF6A9A3BF862D35391F764FE67153F" Directory="INSTALLFOLDER" Guid="{0B3CD4D2-A7F0-4FA1-BD39-E4DB7E7946ED}">
+				<File Id="fil494DCCE77F31DE27CD7C03A13FD938B0" KeyPath="yes" Source="items\Qt6Core.dll" />
+			</Component>
+			<Component Id="cmp701A262B1CE5139B2E57DF21A5AA3B94" Directory="INSTALLFOLDER" Guid="{C439B119-CBA1-4C2A-A79D-EEA79CC40582}">
+				<File Id="filD9F54CB97035337EAF318E4E55DD2F5F" KeyPath="yes" Source="items\Qt6Gui.dll" />
+			</Component>
+			<Component Id="cmp1EAE9F3A379CF532AF1EBC883CDCD1D2" Directory="INSTALLFOLDER" Guid="{BB1E2952-7D82-466B-8AC4-399AC41F1469}">
+				<File Id="fil15AC8A9B3B6A6F1FE6BBDDAE2042D5D0" KeyPath="yes" Source="items\Qt6Network.dll" />
+			</Component>
+			<Component Id="cmp6C95449DAD236B0C9989FA43DD56CA85" Directory="INSTALLFOLDER" Guid="{F15823F5-4D95-452C-911C-B6D2899EEB74}">
+				<File Id="fil93AD72205F2074362FE1D69894AF2E4E" KeyPath="yes" Source="items\Qt6OpenGL.dll" />
+			</Component>
+			<Component Id="cmpA885050DFC1F7FE29C253F6530FDDA73" Directory="INSTALLFOLDER" Guid="{84E21AF5-F534-4E4A-BEBB-AB2B5399A8B6}">
+				<File Id="filC2D0D3372C79CAE90A69A23DEE56F296" KeyPath="yes" Source="items\Qt6Positioning.dll" />
+			</Component>
+			<Component Id="cmp10172AF57D8A2051FA67D75DCB7E76AB" Directory="INSTALLFOLDER" Guid="{57977482-8B9A-48CE-BA8C-035C40DC9594}">
+				<File Id="fil4850F148E383BABB706B0F3B8C5124D0" KeyPath="yes" Source="items\Qt6PrintSupport.dll" />
+			</Component>
+			<Component Id="cmpE6D0775744DF70BD0258DC75856C9753" Directory="INSTALLFOLDER" Guid="{133ABA60-40C7-4F56-8ACA-2CC3CEB6925A}">
+				<File Id="filC5569EDDAB047A885E3F9B95815A77AE" KeyPath="yes" Source="items\Qt6Qml.dll" />
+			</Component>
+			<Component Id="cmpD062B6803615462F29B858759319CCC4" Directory="INSTALLFOLDER" Guid="{56419C08-3E08-4291-B9AE-4B549F239E71}">
+				<File Id="fil8EFAB3549CD83BD1F4551F26ECD51E71" KeyPath="yes" Source="items\Qt6QmlModels.dll" />
+			</Component>
+			<Component Id="cmpEAE35A22C2FA28A6B708BAF9D3C3C180" Directory="INSTALLFOLDER" Guid="{671D8980-8FF6-4739-829C-471CF1A50544}">
+				<File Id="fil59B7B70427474E9B3362489A382DCA4E" KeyPath="yes" Source="items\Qt6Quick.dll" />
+			</Component>
+			<Component Id="cmp5B91377914BD137FD64EBA1D6AE10F64" Directory="INSTALLFOLDER" Guid="{923ECF64-2CCA-4961-9D42-6EF222EC0AFD}">
+				<File Id="filAB9EBE20735A53F7A0F7043D62399B1A" KeyPath="yes" Source="items\Qt6QuickWidgets.dll" />
+			</Component>
+			<Component Id="cmpF55AE54A0D087DB26CDE52F2040AE0E6" Directory="INSTALLFOLDER" Guid="{AF32A2D4-ED71-467A-9244-5E329A260A5E}">
+				<File Id="fil0D6B8CD5C736BB38037C989FDB4BE285" KeyPath="yes" Source="items\Qt6WebChannel.dll" />
+			</Component>
+			<Component Id="cmp7DA14746CCFEA38C01602E5A27AF75EF" Directory="INSTALLFOLDER" Guid="{1B1CCC8B-58A8-489C-BEBC-EDAC0BD4BD54}">
+				<File Id="fil1D058F5D7ECD6A73AB9210D592B53D73" KeyPath="yes" Source="items\Qt6WebEngineCore.dll" />
+			</Component>
+			<Component Id="cmpE3BF4BAF82BA868C1B48E947AB2EA2F3" Directory="INSTALLFOLDER" Guid="{472CEE03-821D-4C7F-A3A6-CCE257F8529B}">
+				<File Id="fil29DD3FB4C34DB32B95E8A06F92F33A48" KeyPath="yes" Source="items\Qt6WebEngineWidgets.dll" />
+			</Component>
+			<Component Id="cmp5B0A9912E5069950C30FC5FF8EAA16D4" Directory="INSTALLFOLDER" Guid="{8EF23843-2A54-426A-A17E-A12B19A07087}">
+				<File Id="fil9F3707482AFAB8A22C7B5C23D8C7CE69" KeyPath="yes" Source="items\Qt6Widgets.dll" />
+			</Component>
+			<Component Id="cmp63A52F5A47293F175104D8ECC9694BB7" Directory="INSTALLFOLDER" Guid="{6A5450F3-2C37-4609-B292-AD305A4DB39A}">
+				<File Id="fil156A2FE6B6FABA1B026CAD632EB08D29" KeyPath="yes" Source="items\QtWebEngineProcess.exe" />
+			</Component>
+			<Component Id="cmp14E914FE4F997485D7D58A09AB0C45FF" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{920799CE-377B-40BB-A14A-C9F9C2852D8C}">
+				<File Id="fil83B1E4D58ECC356FA2D1C30794EB0DCC" KeyPath="yes" Source="items\plugins\platforms\qdirect2d.dll" />
+			</Component>
+			<Component Id="cmpCC53DCD707C4BC877DF66DE4F40B99AD" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{9B444E10-1894-4CEE-8813-329A390F8B0C}">
+				<File Id="fil11B564AC42F77EBCB0E93CFA93FFFA4D" KeyPath="yes" Source="items\plugins\platforms\qdirect2dd.dll" />
+			</Component>
+			<Component Id="cmp886784F2A24BA3ACA2F62490C2B76721" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{3FE0DF03-67FE-4243-990B-67C0C4526E48}">
+				<File Id="fil2DA844826C9150DED47DACB900BC0DFF" KeyPath="yes" Source="items\plugins\platforms\qdirect2dd.pdb" />
+			</Component>
+			<Component Id="cmp27286A40D468ED7FFBB7A70E8C8D07BA" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{CC81F9A0-E60F-4310-84FD-5839F0739757}">
+				<File Id="fil6B940756BEFDE6216A9F321834D9C5F2" KeyPath="yes" Source="items\plugins\platforms\qminimal.dll" />
+			</Component>
+			<Component Id="cmp091A17F56AF03A3E112A23E9CE5A727A" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{EF4AF67F-209F-414C-8215-856AF780724B}">
+				<File Id="fil914C6B944EEABB20BE2F6363CA25BB73" KeyPath="yes" Source="items\plugins\platforms\qminimald.dll" />
+			</Component>
+			<Component Id="cmpEC40FC54DDE3B1AAF1608E79AB20C3A1" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{7B3C6975-CA1D-4632-A9E1-98756EF299B4}">
+				<File Id="fil8FA9672E369382B00381DD9672553B60" KeyPath="yes" Source="items\plugins\platforms\qminimald.pdb" />
+			</Component>
+			<Component Id="cmp9E68B360117346ED9F6D686621921766" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{9B8EC375-F5A7-4E22-8559-4926A0E9F5A4}">
+				<File Id="filA3A7F0D6BB7CCAEE40DD87CE7E74F737" KeyPath="yes" Source="items\plugins\platforms\qoffscreen.dll" />
+			</Component>
+			<Component Id="cmp8890D9635AC5FEB3B35C3FDCDDDAB3F2" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{89DEFCBE-A420-4856-8D5D-3D51B5369DFC}">
+				<File Id="fil0C7E1B02043283619E20068643969762" KeyPath="yes" Source="items\plugins\platforms\qoffscreend.dll" />
+			</Component>
+			<Component Id="cmpBB39252B8A648872F86EA3956082081B" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{71BDF89B-28DD-4F58-8AE9-4AC3E85F66F2}">
+				<File Id="fil9FF96B4E48F557E9EAE412F356F0F6BF" KeyPath="yes" Source="items\plugins\platforms\qoffscreend.pdb" />
+			</Component>
+			<Component Id="cmp3BDACC2F7869AC0CDC011A4CD0E25FC4" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{923D22B3-39A8-438B-A093-DB7161C0B466}">
+				<File Id="filFA61540A04B22BC31DF3143190C3ED96" KeyPath="yes" Source="items\plugins\platforms\qwindows.dll" />
+			</Component>
+			<Component Id="cmp9494E36E46A825006E8F326B950E5CF1" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{2138A115-FBD4-43CE-8443-2A9DF04FF3CA}">
+				<File Id="fil804777C24540080DA25C354592DDACBC" KeyPath="yes" Source="items\plugins\platforms\qwindowsd.dll" />
+			</Component>
+			<Component Id="cmp0C5D6CD5F7AB7D1666DE756B447FD91D" Directory="dir72722C2B48D499E116A40DF094DE88C0" Guid="{DBC880BD-18B8-4650-9254-0F1B182B52E6}">
+				<File Id="fil809EDF1E83D83ACBBC9237D4606418C4" KeyPath="yes" Source="items\plugins\platforms\qwindowsd.pdb" />
+			</Component>
+			<Component Id="cmp775B669F6A4C9D4508432F8A59DD74AB" Directory="dir09903639A005C2D197EB19C866CDE8EB" Guid="{5ED0EC6C-6025-4CCC-9515-1295709257C3}">
+				<File Id="filDC8191A374BBD25C8C511AE34B8F7E17" KeyPath="yes" Source="items\resources\icudtl.dat" />
+			</Component>
+			<Component Id="cmp4759FEC8EEEC24299890A67EC456AF0E" Directory="dir09903639A005C2D197EB19C866CDE8EB" Guid="{FE9381E5-0CFD-4309-931E-FCF54D4A23BF}">
+				<File Id="filF3428A1D404EE6215F2F3657AD07436A" KeyPath="yes" Source="items\resources\qtwebengine_devtools_resources.pak" />
+			</Component>
+			<Component Id="cmp9290ED0FAF59136EE4E1D320289754CA" Directory="dir09903639A005C2D197EB19C866CDE8EB" Guid="{51945626-DA38-45F1-BB78-25BDAC07EFC9}">
+				<File Id="fil8184AD3F19EBCB9FB41E77460DEDE34A" KeyPath="yes" Source="items\resources\qtwebengine_resources.pak" />
+			</Component>
+			<Component Id="cmp07988A4B22C677981AD888F4DFF4EFE2" Directory="dir09903639A005C2D197EB19C866CDE8EB" Guid="{687BAC08-B49D-4603-9202-1DD784B48A7A}">
+				<File Id="fil06CA748B1DB257D4ACEFB03BD7414DB7" KeyPath="yes" Source="items\resources\qtwebengine_resources_100p.pak" />
+			</Component>
+			<Component Id="cmpED177401DCA121E73750C91EC7F61C28" Directory="dir09903639A005C2D197EB19C866CDE8EB" Guid="{EC558446-BF0C-4F8E-A554-70C4E6FE1B84}">
+				<File Id="filDB1099662C6630E7A981AFC27596BB1B" KeyPath="yes" Source="items\resources\qtwebengine_resources_200p.pak" />
+			</Component>
+			<Component Id="cmpD812841E75ACEF64922B0030E10CC8F6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F3729B12-B390-4FC7-BD84-DA06BC35C21F}">
+				<File Id="filC6DEB186884A17F2210A0F5AA4A3285C" KeyPath="yes" Source="items\translations\assistant_ar.qm" />
+			</Component>
+			<Component Id="cmp7CFC22BB006AEF189D3E05E507885619" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A7DBAFED-7EC2-4972-9B87-96F39EF1C78C}">
+				<File Id="fil39EC41B31C9B0CEB4A85348AC7A0EF10" KeyPath="yes" Source="items\translations\assistant_bg.qm" />
+			</Component>
+			<Component Id="cmp5E2E98F1EEC3B6314EB66010789107A5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0E5429DA-67B3-48F1-9AAB-DDC8065B1203}">
+				<File Id="fil4B68BBAA23FB7A6494A11462D1106A19" KeyPath="yes" Source="items\translations\assistant_cs.qm" />
+			</Component>
+			<Component Id="cmpFBA2842522F440B1DAF8132FDC6F108C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{B21F584A-E3AC-4B6D-9009-16A6CEE8B05E}">
+				<File Id="filCBDB3DE73D25B69D29588B1BBFE3285F" KeyPath="yes" Source="items\translations\assistant_da.qm" />
+			</Component>
+			<Component Id="cmp57026AEC507443F61D054507EE40DBB6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{37C62483-1FD6-41E3-A8DB-DCA3C403E742}">
+				<File Id="filAB6C63FADBE9512D475395B5DC47C58B" KeyPath="yes" Source="items\translations\assistant_de.qm" />
+			</Component>
+			<Component Id="cmpD186FF4B7028F38FF9CDDFFEFD605C7B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{170247ED-8AF9-411D-8D88-1FAD3120B229}">
+				<File Id="filEF94CE3A4B4809F06F11D9B689CC40DD" KeyPath="yes" Source="items\translations\assistant_en.qm" />
+			</Component>
+			<Component Id="cmp089950BDAF0C2CCAAF8BF09D8D911D33" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C05AF301-8EF5-4F77-8FB7-A3987CF09089}">
+				<File Id="fil1D845C4D69105C24AE4407C4DC4A3727" KeyPath="yes" Source="items\translations\assistant_es.qm" />
+			</Component>
+			<Component Id="cmp89D8841D30FDEE1C7ED4521CFDDB4687" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{08443819-E764-4696-8C47-BF94E7E20A18}">
+				<File Id="fil38C709054901D9E5607F44FC94BD6478" KeyPath="yes" Source="items\translations\assistant_fr.qm" />
+			</Component>
+			<Component Id="cmp37CDFD4F98F3D94D15C3F24DFAF84FBC" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C4F83F2E-35DA-49A2-8E69-F75502D2339C}">
+				<File Id="filF1898BD5D130E3E596A79D406B338175" KeyPath="yes" Source="items\translations\assistant_hr.qm" />
+			</Component>
+			<Component Id="cmp87F44BED47B24C647FD536A9025C77EA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D62DF7FA-678F-479A-8B67-701174E30177}">
+				<File Id="fil9E2DD341A19D064F38B27B92F7D50072" KeyPath="yes" Source="items\translations\assistant_hu.qm" />
+			</Component>
+			<Component Id="cmpB5E1A6FBD344D85361908D4D5AA33923" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D05BD347-72DE-47D2-BCE4-EA8A3F7CBC4C}">
+				<File Id="fil474E83AB1C9F0C5505E210DD002441D5" KeyPath="yes" Source="items\translations\assistant_ja.qm" />
+			</Component>
+			<Component Id="cmpE8E0B4F5F69CB44BE401DEDBAF778ABF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{065E5176-1C2E-461B-96DF-4C33F96DB5BC}">
+				<File Id="fil9AC530391D978D756AEC9CDB15F88274" KeyPath="yes" Source="items\translations\assistant_ko.qm" />
+			</Component>
+			<Component Id="cmpE837303FA79BEF1965996B2A2BD93E4E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{340A9004-5AC2-4E67-8214-6BAEEAC468D5}">
+				<File Id="fil0376A562D363A4EF63ADC2E33DC00CEC" KeyPath="yes" Source="items\translations\assistant_nl.qm" />
+			</Component>
+			<Component Id="cmpDE5576C4F705097C7831BA02D691ED06" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0ABE1F6B-9399-4977-9795-8869723ACAD4}">
+				<File Id="fil188B8AF6539FFD5BA0312AD302E30196" KeyPath="yes" Source="items\translations\assistant_pl.qm" />
+			</Component>
+			<Component Id="cmp277C9C6F1CE5A9F28FD1DF3DB78860BC" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AF002FFF-20F7-4F83-AF6A-39C0CAFCF27B}">
+				<File Id="fil259720ED1DE05AED920A2BE1838A7F53" KeyPath="yes" Source="items\translations\assistant_pt_BR.qm" />
+			</Component>
+			<Component Id="cmpF4DD2B327E941CAF8F71341B348A8116" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3C966F7C-B4C5-4715-B700-FBB2F21A034C}">
+				<File Id="fil0B2C597B2A0A0522FF49C2DD87E272A7" KeyPath="yes" Source="items\translations\assistant_ru.qm" />
+			</Component>
+			<Component Id="cmpD57B83D5E1A749DD954AE70128B2B110" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CBC5B842-1433-4005-8FEF-0512782260DA}">
+				<File Id="fil5B9D7CFE70CD96C58ACE3FCE36C1A34A" KeyPath="yes" Source="items\translations\assistant_sk.qm" />
+			</Component>
+			<Component Id="cmp87FA9C8C409E041125478D56D402905F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{76D89908-9A8D-4FA2-9949-C05AFB0B133D}">
+				<File Id="fil1D91BA80A7F3AC300B0AC778F24BC579" KeyPath="yes" Source="items\translations\assistant_sl.qm" />
+			</Component>
+			<Component Id="cmpD9A6E82262F1A7FB6842EC5C6AAE6FEA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4CD6A944-9747-4FE2-80E9-5DA0E5932BB1}">
+				<File Id="filA74606B4EC4A1134C143E8F63A4C3703" KeyPath="yes" Source="items\translations\assistant_tr.qm" />
+			</Component>
+			<Component Id="cmpA5A99CC8A75E40539C393510060160ED" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8882C871-F0F5-4A7B-B99F-78895F4D2A2D}">
+				<File Id="filB9B568B823314A7BE84AC33C796A9DDC" KeyPath="yes" Source="items\translations\assistant_uk.qm" />
+			</Component>
+			<Component Id="cmp587E6D6884DBE449CD58C8D18BFC2777" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{34319C48-08E4-4288-8D94-B34507897488}">
+				<File Id="fil49F3714774DCEDAFE6C30F2BDE23FB4E" KeyPath="yes" Source="items\translations\assistant_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp5AD2CE1F149460F0D2F7DE392C2AC4EA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{44BF5160-EE30-439B-8568-12FC65687B29}">
+				<File Id="filE126FADBB65922D10242F30EFEA75AEE" KeyPath="yes" Source="items\translations\assistant_zh_TW.qm" />
+			</Component>
+			<Component Id="cmpE3FD3651A60F9D7EA1661296AF19E0C4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{237837F6-5D67-4D3D-99F8-FC240F055DB2}">
+				<File Id="fil1607C879C04981758A28E33A0E90E466" KeyPath="yes" Source="items\translations\designer_ar.qm" />
+			</Component>
+			<Component Id="cmp141B6DDBCEC2D53C1FC8997E3F6D8B64" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{94B0E95A-2241-4FAB-B5BE-AD99A507F139}">
+				<File Id="filDF96B18B0DA6AA3D58DFEC6DC6B9AED7" KeyPath="yes" Source="items\translations\designer_bg.qm" />
+			</Component>
+			<Component Id="cmp7B07EA26C377865829337F3E763A9209" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9B05CDDE-9808-43F2-9225-9B90D0FC99BC}">
+				<File Id="filB33B0CA0006F38A63824B815058B8C20" KeyPath="yes" Source="items\translations\designer_cs.qm" />
+			</Component>
+			<Component Id="cmp096F319EACD762FFEC5C246849308F5B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0FA0F42E-C101-4C54-B275-0AB0A6C72614}">
+				<File Id="fil40F0DE2E80B5565F9F5BC09A0C575912" KeyPath="yes" Source="items\translations\designer_da.qm" />
+			</Component>
+			<Component Id="cmp49FF161A92B4DAAF06908B584CC061FB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D8F4EC37-683C-4EC2-B02D-6C6F937908EA}">
+				<File Id="fil694C4E3AF62D33E0F844E41B882A9076" KeyPath="yes" Source="items\translations\designer_de.qm" />
+			</Component>
+			<Component Id="cmpDB001892F9869A11BCF88EA1994078C2" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9A760EB6-FFE1-4FEA-8983-4F1058BB6608}">
+				<File Id="filEFB8C220C191981F7B171649E5212AED" KeyPath="yes" Source="items\translations\designer_en.qm" />
+			</Component>
+			<Component Id="cmp0707568E81FD83F3747C20A0BD2E2165" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F2D5FDEA-E2DC-40A3-A946-EBCAE6CC06B9}">
+				<File Id="fil8018C3AB5A09D262B88461E3F952B1A0" KeyPath="yes" Source="items\translations\designer_es.qm" />
+			</Component>
+			<Component Id="cmp0079866D07557C7E4661C402FF9B0D3B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{932D5C06-64FE-45C0-A945-44432D627EB3}">
+				<File Id="filBC73C52882BFC3308FC60DBD53CF49BE" KeyPath="yes" Source="items\translations\designer_fr.qm" />
+			</Component>
+			<Component Id="cmp06476553BAB790DB3ECAE81C8FCD2065" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EA998E71-1CDE-46D2-B01F-BFC07F1D8863}">
+				<File Id="fil4E977F4C91DA2308CEA41327652784BF" KeyPath="yes" Source="items\translations\designer_hr.qm" />
+			</Component>
+			<Component Id="cmpFD577DE5ECF46282C904BB5E19B23C35" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{984D4366-70D2-4A41-8414-232CC1C9B2BA}">
+				<File Id="fil0BE986EE355EDB9A0180FA6758D7E7AB" KeyPath="yes" Source="items\translations\designer_hu.qm" />
+			</Component>
+			<Component Id="cmp9B77AA2FD5D47BEC23378AFD8ABA3B14" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4CE914F7-D3E2-4CA6-ABA9-B872EDBD58B0}">
+				<File Id="fil3110DAD72613BA7976F82B775157A159" KeyPath="yes" Source="items\translations\designer_ja.qm" />
+			</Component>
+			<Component Id="cmp912546B34C21CB6D1C3FCE33EFA0E681" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{B6CCB767-7324-4A57-8397-0AAFDD753D8B}">
+				<File Id="fil71362E105EC8D5F064B90FD57BCC4D8C" KeyPath="yes" Source="items\translations\designer_ko.qm" />
+			</Component>
+			<Component Id="cmp7A2E51F6C74DC954D04873C10751A015" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CA419D0D-A82A-48B8-B0DE-0E00E4AF3813}">
+				<File Id="filAFBB40CFFB02941BE745513D742D768B" KeyPath="yes" Source="items\translations\designer_nl.qm" />
+			</Component>
+			<Component Id="cmp0B26B7B2442B99D19D487CB1A5F53D8B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DE57B63A-C065-4265-A574-D662AC484F1D}">
+				<File Id="fil08A29620BEBDB1BD2C1DF2A3531F78ED" KeyPath="yes" Source="items\translations\designer_pl.qm" />
+			</Component>
+			<Component Id="cmp8DA574B31C750BB8DE4E8E70BA3FC2EA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{864B947A-3E6C-4637-A481-8E314B65F330}">
+				<File Id="filF8A31C2C26ADA7041AB97E2297EE46B6" KeyPath="yes" Source="items\translations\designer_ru.qm" />
+			</Component>
+			<Component Id="cmp77FDE39EECD3E9D82877F49F8B81D936" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{250579ED-8029-4B7A-BFF0-C47701435C7F}">
+				<File Id="fil933B01C3826DF1C542075BC3815EE852" KeyPath="yes" Source="items\translations\designer_sk.qm" />
+			</Component>
+			<Component Id="cmpFB06C6ACAC7C84D1BAE2DBF3B9E8397F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F12CCEEA-7C84-46DE-844B-F73305B939A7}">
+				<File Id="fil8817BE0E83C35E60F8B939C8463E0B32" KeyPath="yes" Source="items\translations\designer_sl.qm" />
+			</Component>
+			<Component Id="cmp593DFEE08841E0CABA84EEDB846AB5CA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8723B9E5-2C96-4034-B668-CF0DE5C92173}">
+				<File Id="fil3402CFD821D2C39C1BEC9E65B36C8DB0" KeyPath="yes" Source="items\translations\designer_tr.qm" />
+			</Component>
+			<Component Id="cmp176B142D47DC5C49398E21A67B964040" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{666FF92A-046F-4354-B4A8-9C230B80D0B1}">
+				<File Id="filF68B2BF4656DB8C3AB6DE6071D1072F4" KeyPath="yes" Source="items\translations\designer_uk.qm" />
+			</Component>
+			<Component Id="cmpE8C38E076BD60E2F1AB669E4FE3D2FD4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DAF95A97-A7D8-428A-8995-3584BE8F5064}">
+				<File Id="fil672E0EB48487B07D7DB0CB1362A40F78" KeyPath="yes" Source="items\translations\designer_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp5ED44C4C08969416DF0FA8718146E419" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F5C84821-F5C9-40AB-A43C-AFD68CC9768B}">
+				<File Id="filAF2FD642EDD08C886A00D1A7AFC04314" KeyPath="yes" Source="items\translations\designer_zh_TW.qm" />
+			</Component>
+			<Component Id="cmp8C2A78FA7941F7A7888A4D3B9DC24512" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6515989C-7F26-4801-97CE-A9F954FF319A}">
+				<File Id="fil7B6E90B1634DE5D9E7648BDF2A9FEE09" KeyPath="yes" Source="items\translations\linguist_ar.qm" />
+			</Component>
+			<Component Id="cmp7D86EA5989AF16906DC39CF3F407B03F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DB55080B-3643-42C8-AC58-9933DDA1AD42}">
+				<File Id="filAD1BDF7BAA59F735D2BFA61CE1478AFD" KeyPath="yes" Source="items\translations\linguist_bg.qm" />
+			</Component>
+			<Component Id="cmp05497A07A81120F83DEF14FFA80CFD0C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D1BE8EFB-A69D-4E09-949A-F85F90DE618E}">
+				<File Id="fil9F3A867D4CC16C6C9A6B5F1E67B64C65" KeyPath="yes" Source="items\translations\linguist_cs.qm" />
+			</Component>
+			<Component Id="cmp32B095F3C338B5BF0F6DF9E2B094E1D1" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A29B1C89-86E1-4873-AFCA-9C2D78035EE4}">
+				<File Id="fil7D80E771E863222C886B61956B75C46D" KeyPath="yes" Source="items\translations\linguist_da.qm" />
+			</Component>
+			<Component Id="cmp0C95DC3A59FD9E52ED29E21F2F644E41" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CDB23839-9017-495A-8F32-72710690D2E0}">
+				<File Id="fil5B7619E278F4B1E15DD395123FE74FA7" KeyPath="yes" Source="items\translations\linguist_de.qm" />
+			</Component>
+			<Component Id="cmp69DE33261C6ABC6B340547D41D13A7EE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{12A3B953-2D3F-42F7-BF46-4A4CF12C9077}">
+				<File Id="fil5308CFB42BEECF3DFA30F258BB375B28" KeyPath="yes" Source="items\translations\linguist_en.qm" />
+			</Component>
+			<Component Id="cmpE19451CA0D7AB6A8C37ED91B3C2DB73D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{79287D34-A3D6-4138-88C9-7A9D1BF3A74B}">
+				<File Id="fil6974D0FB839C277490C7DDB69C9B6393" KeyPath="yes" Source="items\translations\linguist_es.qm" />
+			</Component>
+			<Component Id="cmpA388AFC4242AE18D128A81FC4B1B9AC5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EADB2157-415A-4AB8-BF0D-804630384D89}">
+				<File Id="fil96B157FA7012017C5F4DE076C84E4E03" KeyPath="yes" Source="items\translations\linguist_fr.qm" />
+			</Component>
+			<Component Id="cmp52195EB704A9E5F0FA57EF693F7A51B9" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{09A05A01-D17F-44EE-B615-2E9DB28F9E48}">
+				<File Id="filC17EE31255E8995D050698F1604FB1BB" KeyPath="yes" Source="items\translations\linguist_hr.qm" />
+			</Component>
+			<Component Id="cmp3BC8EB9DAC588B7CFCEFD18F9094DA12" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AFE55158-904D-493F-A0E9-B44B7BBF4E0C}">
+				<File Id="fil0EE6DC163722B47706176B8DAE962273" KeyPath="yes" Source="items\translations\linguist_hu.qm" />
+			</Component>
+			<Component Id="cmp6601BBFA86BDFFBC6C881054F806F452" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FB3A745C-E3D5-47A6-A785-4C004CDAD5EF}">
+				<File Id="fil309C47EB1B6BAE6351D4C20656AD38CE" KeyPath="yes" Source="items\translations\linguist_it.qm" />
+			</Component>
+			<Component Id="cmp0C610C5B613E6628914972E341C2F55E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FBA0113C-6521-4961-843F-FB7A39125F1A}">
+				<File Id="fil9E3CB12B4D6790D57C4EC4CE17AE1CEC" KeyPath="yes" Source="items\translations\linguist_ja.qm" />
+			</Component>
+			<Component Id="cmp042607B6F9AE1109D6C8455FC9F3E18A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A583D394-2745-4F8B-BFBF-416AFFA3BA53}">
+				<File Id="filF40B3C22FB52E187E509977C7EC52BB9" KeyPath="yes" Source="items\translations\linguist_ko.qm" />
+			</Component>
+			<Component Id="cmpA9E56FC5B3A212B9791CBDDD206008B6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{E5A452BD-4709-40C3-8A9F-E8E1C4A652F5}">
+				<File Id="fil7903D297E6EFC1C2C2617C23453E6632" KeyPath="yes" Source="items\translations\linguist_nl.qm" />
+			</Component>
+			<Component Id="cmpBF36056CD40F2C0C544ECCA2FF61755A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{40657CF7-C420-4255-BF42-460F9F7F8593}">
+				<File Id="filF42838D8026D65ACFCA77E326E125DC1" KeyPath="yes" Source="items\translations\linguist_pl.qm" />
+			</Component>
+			<Component Id="cmpA452C5173967ED232E13EF6BAE6373D7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D04418C5-7D37-4F11-A78D-16264631A355}">
+				<File Id="fil0A5DFA2CC4E166003AEBAFC1FF0F714B" KeyPath="yes" Source="items\translations\linguist_ru.qm" />
+			</Component>
+			<Component Id="cmpC70AA9C63908251E087251CFB98F390E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4E4A13D4-24DB-49A8-A9D4-F7B5E435A236}">
+				<File Id="fil82234BDF165B65EE15CBD841422D6406" KeyPath="yes" Source="items\translations\linguist_sk.qm" />
+			</Component>
+			<Component Id="cmp0D06103FA9E3D597A7596580EE2C95E5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{E96EF086-30DB-4B48-88E4-47E2C0145C91}">
+				<File Id="fil0F5B9231FD8A2D890FFD8BAA97AB4692" KeyPath="yes" Source="items\translations\linguist_sl.qm" />
+			</Component>
+			<Component Id="cmp7125DF5DEA24F6082DC5912E1C02DF44" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DBA53887-34A4-4B81-AA70-696868BDCAF3}">
+				<File Id="filD17E3CE39FAF163E7357BF470349ACEE" KeyPath="yes" Source="items\translations\linguist_sv.qm" />
+			</Component>
+			<Component Id="cmp25523DB16AA893478CE82FD49AD0ADA6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F0C5AAAD-9D61-4080-9977-C8B0648B1F23}">
+				<File Id="fil2B3A651F29A6DE022DA49D680D565A20" KeyPath="yes" Source="items\translations\linguist_tr.qm" />
+			</Component>
+			<Component Id="cmp0C96C7A74D56AAD949F69665BD2E96EE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4AE2847D-E1A9-4143-AF13-1348E3CE5BEF}">
+				<File Id="fil2D87586EB181ACAB406D72D3178C8B82" KeyPath="yes" Source="items\translations\linguist_uk.qm" />
+			</Component>
+			<Component Id="cmp9FE856A9787903C8CFC35401DC9C9417" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{50F0C406-CDB1-486F-A863-AE518F709043}">
+				<File Id="filEFF29497F17CABA761374201FC4210EA" KeyPath="yes" Source="items\translations\linguist_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp1B0FB9D6997F6CEC068B285E50BA3D3B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A10CFA3A-2647-4DD4-B4EB-FAA4B142E5E6}">
+				<File Id="filEDBF250E5DB4833C341B88FC42D0BB73" KeyPath="yes" Source="items\translations\linguist_zh_TW.qm" />
+			</Component>
+			<Component Id="cmpB5259A560D73C5B0ED519BB54C09AC50" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6FE54647-9D36-4A34-8529-29A924D9EE29}">
+				<File Id="filA8D3EBECDF4C1C72926042129B1DD702" KeyPath="yes" Source="items\translations\qtbase_ar.qm" />
+			</Component>
+			<Component Id="cmpFB156C05B97CE0CB120EDBB60E094302" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{11E9187A-629D-4CA7-9357-AFAD8B28BB7A}">
+				<File Id="filF72299104214B34F0ADB4BAA80938562" KeyPath="yes" Source="items\translations\qtbase_bg.qm" />
+			</Component>
+			<Component Id="cmp23B5AE8AE95622F55ADA60FC50A96424" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4E672E10-5B12-4BC3-8B8B-56C92AEB3096}">
+				<File Id="fil1A14870C110DD166404883CA8C20C660" KeyPath="yes" Source="items\translations\qtbase_ca.qm" />
+			</Component>
+			<Component Id="cmp089CC762F81727FF02C174D3D48B2ECF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C3150DCB-88CB-475C-849D-5C8DB7B6C900}">
+				<File Id="fil43EB120A846F99FD520D6C5D9EDAB01E" KeyPath="yes" Source="items\translations\qtbase_cs.qm" />
+			</Component>
+			<Component Id="cmp5BDA26C1E3686E0A535A5461E73A3D97" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{893D3824-8853-4969-B8A9-F32B271AC77E}">
+				<File Id="fil562D3F2CEF5AF2998A419E2B677A7FEB" KeyPath="yes" Source="items\translations\qtbase_da.qm" />
+			</Component>
+			<Component Id="cmp3BC83D0306A0412C3DE666783C9B6A0E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{84006FA0-0B7F-4BD3-858C-FFCB518CF298}">
+				<File Id="fil6646D522C835995F630DA6BD4CB2E28D" KeyPath="yes" Source="items\translations\qtbase_de.qm" />
+			</Component>
+			<Component Id="cmpFA7211AE1E9531666334963D74DA07B7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9DF08C86-96D3-4AA1-8BE6-89699E12D6DF}">
+				<File Id="fil97F9A0D741413DCF8E6B71D8831DA69F" KeyPath="yes" Source="items\translations\qtbase_en.qm" />
+			</Component>
+			<Component Id="cmpFBAAA1C2E3F684B15B73427B9DD55025" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8AAC51B0-2F6B-43C7-B228-694346CA521C}">
+				<File Id="filCCD54EB2343EB97ED7F959EFBA628976" KeyPath="yes" Source="items\translations\qtbase_es.qm" />
+			</Component>
+			<Component Id="cmpEE61766A2E6A817675C564DD8897887B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FC201BCB-CD0D-4925-8B86-96CA28607009}">
+				<File Id="fil16954D30B6879ECCC37501114B154036" KeyPath="yes" Source="items\translations\qtbase_fa.qm" />
+			</Component>
+			<Component Id="cmp7A03CF0FEE7E766F047FF6E4AABEA412" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3498C0C7-3462-4228-A164-05B495CB8A07}">
+				<File Id="filA1EECC03E3626C9402D91CBD5629DC83" KeyPath="yes" Source="items\translations\qtbase_fi.qm" />
+			</Component>
+			<Component Id="cmp4D3EDD87B6A63E8A85076F9C94BC6FBE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EDC4AC70-025D-4AC9-81E1-6F2E02DFDE37}">
+				<File Id="filECCD63D1B76B2BC8C569EF3B80033817" KeyPath="yes" Source="items\translations\qtbase_fr.qm" />
+			</Component>
+			<Component Id="cmp49EE88449254540220AB33930B39CCDE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F77E170C-32AE-47B7-B6FC-94AF8B7DAFE5}">
+				<File Id="filE9974CBEF9ED91B8BC9564E0455EB16A" KeyPath="yes" Source="items\translations\qtbase_gd.qm" />
+			</Component>
+			<Component Id="cmpE848A074EFECF0174ACDBB37D92DD7EB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FD0F2A1E-C3F0-4CFF-BE12-F49F2FF8D420}">
+				<File Id="filB314209712F3A5B565CA56ABBC7AA1F1" KeyPath="yes" Source="items\translations\qtbase_he.qm" />
+			</Component>
+			<Component Id="cmpAFE6774AB29971113567B1039C3047A6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{12E5A5AB-C14F-4DB8-AFCD-778001834681}">
+				<File Id="fil20EB156D6107E9A0ACE911560509E55A" KeyPath="yes" Source="items\translations\qtbase_hr.qm" />
+			</Component>
+			<Component Id="cmp1AF4F76E1827A61951C96E0136A22330" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{797015EA-104F-4A41-ABD6-4DFEC86E9080}">
+				<File Id="filEC1D5EF199C4E39EF932519A1E1F3D4E" KeyPath="yes" Source="items\translations\qtbase_hu.qm" />
+			</Component>
+			<Component Id="cmp47A9C417FFA3793BABB221FBF7E23F53" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8C1F9257-27BE-4D4C-8563-2D9F7A209E3D}">
+				<File Id="fil23C349C49E1DF43B469C364B1D1E190F" KeyPath="yes" Source="items\translations\qtbase_it.qm" />
+			</Component>
+			<Component Id="cmpB5733362DB2672F4537334065D0FD7EA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{928D6A95-B296-4010-BBB2-9A16374AB1CB}">
+				<File Id="filD5BCF477449E5EF6B0E022E2C42466F3" KeyPath="yes" Source="items\translations\qtbase_ja.qm" />
+			</Component>
+			<Component Id="cmp12B84519CD8D62F210D8AD9BAF8C4ADA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{142B8D94-329F-4C5B-A075-E3BCB38B0EE2}">
+				<File Id="filB687289C0C283787CFDD966FFE396CF7" KeyPath="yes" Source="items\translations\qtbase_ko.qm" />
+			</Component>
+			<Component Id="cmpC4AD264F2B136C4F26FD4E3F007B2D30" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3413F64F-1491-40C7-BB53-60F070541531}">
+				<File Id="fil95733EABF72E9E0AF37C6E8F6680A88C" KeyPath="yes" Source="items\translations\qtbase_lv.qm" />
+			</Component>
+			<Component Id="cmp629A8100F583B5D65AD4569AD899B5E7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3CA3DE7A-5DB4-439F-B1E5-A4FC6EFCEE92}">
+				<File Id="filD1BF01D2D094252F5063D5A47E65B0ED" KeyPath="yes" Source="items\translations\qtbase_nl.qm" />
+			</Component>
+			<Component Id="cmpE322223DEE8522E53642FFFAE2048B06" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{48DD7B89-00AC-483E-BB17-2F83897D263E}">
+				<File Id="fil14E2346C97F3676942DFF32C7C0180BD" KeyPath="yes" Source="items\translations\qtbase_nn.qm" />
+			</Component>
+			<Component Id="cmpF73BD3C629591952DB8649EA0B0A1DC4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{5B37463C-C915-47EC-86B6-86407398ACAD}">
+				<File Id="filC0287AAAD68A98253C83E4095C1860D6" KeyPath="yes" Source="items\translations\qtbase_pl.qm" />
+			</Component>
+			<Component Id="cmp84F8735962559F18A0B9D6B1487E7FA4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D783A392-D9FC-412D-B01E-C7E9990EAAFE}">
+				<File Id="fil8D726A76D7F0CEC6067B5D0CCE63F1B3" KeyPath="yes" Source="items\translations\qtbase_pt_BR.qm" />
+			</Component>
+			<Component Id="cmp42F41874131BD6C998A96796A55F9793" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FAE62252-B982-4C7C-8513-75E61AEAAACA}">
+				<File Id="fil599CE2B0EEC9D3AF446DAF94F7950B35" KeyPath="yes" Source="items\translations\qtbase_ru.qm" />
+			</Component>
+			<Component Id="cmpB3F4AEBF396440818A4A167229373E8D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CA0120C7-70C7-46AD-8318-A670A2A83F95}">
+				<File Id="fil0B62592BC3A637A475CD98350D37666E" KeyPath="yes" Source="items\translations\qtbase_sk.qm" />
+			</Component>
+			<Component Id="cmp12C8D7A4F86182E210F0F613F1F830CC" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A240AA47-AA54-4142-97E9-2D47C4F6BFC3}">
+				<File Id="fil20C9A29766623BE4D667F0410C9D0807" KeyPath="yes" Source="items\translations\qtbase_tr.qm" />
+			</Component>
+			<Component Id="cmpFDDADA0F821DA190AA3BA6D0AF7A9E00" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{74F6BDDE-AC0B-495B-B118-7A82BEED12F7}">
+				<File Id="filF132A4B6D0C0FC6497FDD381041CD8E8" KeyPath="yes" Source="items\translations\qtbase_uk.qm" />
+			</Component>
+			<Component Id="cmp4C1CC8F9E5BBF15D2E241ADEDD69407B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{7E6D708D-D35F-40AB-98FB-9BF217B75237}">
+				<File Id="filC8D0E67DCAE8AE4D9A89A140BD3C2BDD" KeyPath="yes" Source="items\translations\qtbase_zh_CN.qm" />
+			</Component>
+			<Component Id="cmpEC3B5450C54DC44FED1916369DAA77CB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{E58FD09B-6E49-4305-9786-92521FC23E68}">
+				<File Id="fil34ACD389FE58309F6286EE6474EBCDC5" KeyPath="yes" Source="items\translations\qtbase_zh_TW.qm" />
+			</Component>
+			<Component Id="cmp1D82296D28C02BCED6FAECAA2C0D1CFB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3B39C3E1-892E-432D-A03A-68ED3B7CEA2E}">
+				<File Id="fil0A7C00285ECFE9734D8BE7890E2E5314" KeyPath="yes" Source="items\translations\qtconnectivity_bg.qm" />
+			</Component>
+			<Component Id="cmp7A2E7452C0701B2C05A03F3A1842690C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{90AC1332-303A-4AF2-9F39-8196DEBD742B}">
+				<File Id="filC447BEA99D7B481353ED3DE3CC35921A" KeyPath="yes" Source="items\translations\qtconnectivity_ca.qm" />
+			</Component>
+			<Component Id="cmp852D6E17E61D34489DE13E857FC76339" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0604C1A0-96EE-4690-A24C-6434B056EA75}">
+				<File Id="fil2015E683ECE17838A2CF3541227685FD" KeyPath="yes" Source="items\translations\qtconnectivity_da.qm" />
+			</Component>
+			<Component Id="cmpD08583353748290960A26D4989981C8B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C4829E45-5109-49EF-ACEE-591273F24D28}">
+				<File Id="fil19AD6C98C78E8E4BCCCEA864D7F81545" KeyPath="yes" Source="items\translations\qtconnectivity_de.qm" />
+			</Component>
+			<Component Id="cmpBF5ABEAAEF450285521A54AE82BE5A38" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A503D61B-35BC-4A43-A25B-9B8F212EFE28}">
+				<File Id="fil4881670B7BC5C429531AB94CD83EADE6" KeyPath="yes" Source="items\translations\qtconnectivity_en.qm" />
+			</Component>
+			<Component Id="cmpC4633D4392512C37D2471AFA66AB2D5A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{B9A07FC5-5C1B-45E7-A66E-ECC1477A1613}">
+				<File Id="fil42554C35A641A48BDA3700C5C2ADFC73" KeyPath="yes" Source="items\translations\qtconnectivity_es.qm" />
+			</Component>
+			<Component Id="cmp8DBDA7CC8D445210336926E7D0434AB4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C3DD6B47-F357-49C4-9D5A-9BE8594C1EAC}">
+				<File Id="fil707DFCF270A40D30738DD0878A7D7135" KeyPath="yes" Source="items\translations\qtconnectivity_hr.qm" />
+			</Component>
+			<Component Id="cmp690DEF43A541E0E9FF58477F5EB6210B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8BD4D6CF-FFD4-421F-AC7B-2744CDF99859}">
+				<File Id="fil9BC3663CBA844710DC502C41122993FE" KeyPath="yes" Source="items\translations\qtconnectivity_hu.qm" />
+			</Component>
+			<Component Id="cmp03C7ACC90410618861BC50BA5E1532FF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EED8F271-60D1-4D1B-B900-622B65E6FDE7}">
+				<File Id="fil2D762424AAE6B76A9A186A050CCAC972" KeyPath="yes" Source="items\translations\qtconnectivity_ko.qm" />
+			</Component>
+			<Component Id="cmp32BB62D8BFAC63078567610C2AD22623" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3B13A11B-E346-4594-A535-22075E176B24}">
+				<File Id="fil472F811ABA342ACC88E6D1069535320D" KeyPath="yes" Source="items\translations\qtconnectivity_nl.qm" />
+			</Component>
+			<Component Id="cmpE2F72A7BA60C42B6C239E8AE9078C395" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0A8815DB-320D-43F2-BE13-3DC0C72EE188}">
+				<File Id="filFCE5644D5B269BC7DEF4C5E48ABF9DD1" KeyPath="yes" Source="items\translations\qtconnectivity_pl.qm" />
+			</Component>
+			<Component Id="cmp1A144A25E60638F34477E0B05C676863" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C8F16A1B-15B9-47F5-A9CD-FABDBD8D2AF5}">
+				<File Id="fil5CA6D0DCA6D12A99C1B3BDDFC609331C" KeyPath="yes" Source="items\translations\qtconnectivity_pt_BR.qm" />
+			</Component>
+			<Component Id="cmpB40E9E99AE976C314D7BEF9DD6486AC7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DA42FA54-B595-4648-9144-AEE7A7438895}">
+				<File Id="fil29855F5456D2CD6F80BBEB9D3297500D" KeyPath="yes" Source="items\translations\qtconnectivity_ru.qm" />
+			</Component>
+			<Component Id="cmpC91E53068CEE951C9B1ADDBB53D4F44F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{46099D8B-7DB0-45BE-BE17-349CB99C2566}">
+				<File Id="filF622AADA6A6E997A5F2CE228949EB136" KeyPath="yes" Source="items\translations\qtconnectivity_tr.qm" />
+			</Component>
+			<Component Id="cmp4B061EF6F2EC5C180E4DE3E2A70D1AD2" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A9F00E10-A946-4EE7-9CBA-E6AE274026E1}">
+				<File Id="filD0157D6F2BEFBB442AEC109310C1EA5C" KeyPath="yes" Source="items\translations\qtconnectivity_uk.qm" />
+			</Component>
+			<Component Id="cmp334B133B817DC652A13685FF9ED8D93F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A249B16D-CCB3-440B-B7F9-18C0A0F9CFBA}">
+				<File Id="fil02D5CE420368EC38048250002E454654" KeyPath="yes" Source="items\translations\qtconnectivity_zh_CN.qm" />
+			</Component>
+			<Component Id="cmpF253702C3EC5893C19F2DC7292964848" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{5B4E4384-E3D7-423E-94B6-1FCE4BFFFEB0}">
+				<File Id="fil1530C50ADDB0C6C9EB59CF54B395E12F" KeyPath="yes" Source="items\translations\qtdeclarative_ar.qm" />
+			</Component>
+			<Component Id="cmp2262A8137C76D9D48B9A34E8BB81119F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{266BAFAE-C0DA-4FEB-B47F-79A8DE333A65}">
+				<File Id="filAEC5D7FF3B3F0FA56C72D62341CD41B6" KeyPath="yes" Source="items\translations\qtdeclarative_bg.qm" />
+			</Component>
+			<Component Id="cmp476B929AE45D337FB621EABB34E014EE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D1269622-364B-4022-AA23-3732EEC25244}">
+				<File Id="fil8C88985CCC38EBA8BFCB8DBFB23481F4" KeyPath="yes" Source="items\translations\qtdeclarative_ca.qm" />
+			</Component>
+			<Component Id="cmpC4986ABB09852EB6897B67BA7861FDCD" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{1BC11B8E-526D-4D46-8F61-FB893205160B}">
+				<File Id="fil84757A55076BE173803F0AAA8C74B04D" KeyPath="yes" Source="items\translations\qtdeclarative_da.qm" />
+			</Component>
+			<Component Id="cmpD9749535D334F23CD9A5B9E88EF41CB0" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D641A757-0DF7-4AED-AA93-852283F3E5A7}">
+				<File Id="fil1DECA0D5769AE1BF93770EA4D0B116CD" KeyPath="yes" Source="items\translations\qtdeclarative_de.qm" />
+			</Component>
+			<Component Id="cmp5A1B906A169E96EA87B6CC50E842CE79" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CA4C364A-A70A-4E48-886E-0DBF5CD0F296}">
+				<File Id="filA7755977960432159AC0085CD296F06D" KeyPath="yes" Source="items\translations\qtdeclarative_en.qm" />
+			</Component>
+			<Component Id="cmp191D682301ACB2923FBC1CC6B67FE600" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DD313A1E-BE57-4B81-942E-A0560C90DE62}">
+				<File Id="fil6C964F116AC9872D15DCC0C9DB243D7B" KeyPath="yes" Source="items\translations\qtdeclarative_es.qm" />
+			</Component>
+			<Component Id="cmpA2061AF76E0279F2702DEE286FADE19F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3B331159-4FDB-4604-A6F7-C99F04AC01AA}">
+				<File Id="filA6ED1C04247AE6CAFDE1BAFD1484CEE6" KeyPath="yes" Source="items\translations\qtdeclarative_fa.qm" />
+			</Component>
+			<Component Id="cmp31A842CAF79A4D48CF1C0B57F027C6F0" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{ACCD48FA-2C48-4E24-B849-0C7932A8B0BF}">
+				<File Id="filAA329E8045778553195FF36A67CD8DB3" KeyPath="yes" Source="items\translations\qtdeclarative_fi.qm" />
+			</Component>
+			<Component Id="cmpD5AE49BDFEF09612D29350E55BFAC34B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EBD43AE8-E2A9-43A8-A349-621A8D43B5D3}">
+				<File Id="filEA7C478FFCF4ADB76A482E7FEB11741E" KeyPath="yes" Source="items\translations\qtdeclarative_fr.qm" />
+			</Component>
+			<Component Id="cmp6079036BB24A3DCEF951AFE53F8978B5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D92F7955-BEC2-4ECC-87B0-D83FDFF78A20}">
+				<File Id="fil971ABE0A171384F1E45DC7A9409E68C9" KeyPath="yes" Source="items\translations\qtdeclarative_hr.qm" />
+			</Component>
+			<Component Id="cmpBA5085108EA9383B7A223F00955C75CA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{590CF95F-68BB-4B34-ADDF-CBC66A99A28F}">
+				<File Id="fil63CDC6CDDB4E2D089CA38DCF411341A7" KeyPath="yes" Source="items\translations\qtdeclarative_hu.qm" />
+			</Component>
+			<Component Id="cmp3EB25330653B441DA40DA45CDE0E0319" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{1AC027D3-70CA-422D-AFFF-56E3F2007866}">
+				<File Id="fil1B57FA4A118038754B70574541B88560" KeyPath="yes" Source="items\translations\qtdeclarative_ja.qm" />
+			</Component>
+			<Component Id="cmp164CD719462522BE683AA03ED2166617" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F0DBEA33-10E7-4A6D-948C-F0F420C379D5}">
+				<File Id="fil8A27AECE5C679D4206355A3CFB897384" KeyPath="yes" Source="items\translations\qtdeclarative_ko.qm" />
+			</Component>
+			<Component Id="cmp1CFFFA65D1C3BD2D1D72A95609D89398" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{47ABCD56-0D18-4FC0-9CB6-C4F80B9A6617}">
+				<File Id="fil42236F00C9DC3CD5C40A295EC8F9680D" KeyPath="yes" Source="items\translations\qtdeclarative_lv.qm" />
+			</Component>
+			<Component Id="cmp7D768F15C37CD24A21F82ABE0B982F5D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{19A128C7-08A6-4F30-9CFE-3224137951EE}">
+				<File Id="fil39D39B375772955D1560FFCED8543402" KeyPath="yes" Source="items\translations\qtdeclarative_nl.qm" />
+			</Component>
+			<Component Id="cmpFB6503D9EE4149E02804C438BB549092" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FF8D73A1-D2D6-4757-92D4-94CD5FE48F5D}">
+				<File Id="fil700233A57162C031B75D34B262442B1D" KeyPath="yes" Source="items\translations\qtdeclarative_nn.qm" />
+			</Component>
+			<Component Id="cmpB407B7E217C36CD7A4E98E3B6812FBBA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FF3E8320-DE3D-4C0D-A4EB-CCFF41A73995}">
+				<File Id="fil0BE4A82CA786B1DCE9DB0CA82622C755" KeyPath="yes" Source="items\translations\qtdeclarative_pl.qm" />
+			</Component>
+			<Component Id="cmpBB0CC870A42DD4AA7BAF2DB5276987E4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{5A20CE6C-668F-4F76-9307-D918EBF758E2}">
+				<File Id="fil549F7152861B12A7B1E64FE44FF9911E" KeyPath="yes" Source="items\translations\qtdeclarative_pt_BR.qm" />
+			</Component>
+			<Component Id="cmp460A5FE8F5FAF14B0447ADEA9841ED3D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D21EE81B-19A9-47FE-9C70-E85FB726D9D7}">
+				<File Id="filA50C23F39CA49D2AEA8BA47B809D975D" KeyPath="yes" Source="items\translations\qtdeclarative_ru.qm" />
+			</Component>
+			<Component Id="cmp1A143481E9875AE88DDEB8E3005501F0" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4BF6D2FF-A0EF-4602-94B7-605BD70776E8}">
+				<File Id="filD84542A78C28FCE4C2290FB9766AD6CA" KeyPath="yes" Source="items\translations\qtdeclarative_sk.qm" />
+			</Component>
+			<Component Id="cmp21B31E06F5F0B0FA93719F26FF604D7B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{17DC872A-E280-48A7-9007-9B51CD8711B1}">
+				<File Id="fil190C3C6F0C2AA61240B3EBFF7DBDBF52" KeyPath="yes" Source="items\translations\qtdeclarative_tr.qm" />
+			</Component>
+			<Component Id="cmp4A445E0529FCE2FB3ABAE26DC8B0F207" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{92A8E1D8-F6E0-47AA-9A2D-1D9CBD053DF0}">
+				<File Id="filC669D01DB4E54201F46E42BEA6A587C9" KeyPath="yes" Source="items\translations\qtdeclarative_uk.qm" />
+			</Component>
+			<Component Id="cmpB16E911090F533241A50F25986AF9849" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A694D7DA-BB8E-44D4-8418-73A6B0340083}">
+				<File Id="filBA8535ABCFD25DD091F1602F858C9CC6" KeyPath="yes" Source="items\translations\qtdeclarative_zh_CN.qm" />
+			</Component>
+			<Component Id="cmpE9CD46E915C25BEA9C7CF24FAF58C383" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3624D1DE-7E4D-406F-B007-24285D13DC8C}">
+				<File Id="filEDAFA0DAF8E9EA8B653A14A254A59334" KeyPath="yes" Source="items\translations\qtdeclarative_zh_TW.qm" />
+			</Component>
+			<Component Id="cmp17878BCCB132ED6B02801BA707D01134" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A9426885-FD85-4253-B79A-53A8455E3E96}">
+				<File Id="filF928D96B28C9DB17F3839A529CCE59EF" KeyPath="yes" Source="items\translations\qtlocation_bg.qm" />
+			</Component>
+			<Component Id="cmp7585C53833BDFB6E32C6130F1C6A0D82" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8AFAFB7A-DF4F-4F7F-B172-78A9DDBB13A9}">
+				<File Id="filEE7A43805CDE8BC103962A7AB2BBC4E2" KeyPath="yes" Source="items\translations\qtlocation_ca.qm" />
+			</Component>
+			<Component Id="cmpB5F2D0E4F25A33E9AD283758CF256850" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{36F68491-A7EB-46EB-A76C-212EEF35C13E}">
+				<File Id="fil0D62A6E9D419F8D2A9DC114129A6340F" KeyPath="yes" Source="items\translations\qtlocation_da.qm" />
+			</Component>
+			<Component Id="cmp2240548C6283CF9366CBF37FD19A6CF2" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F9D02BE9-2EBB-4CAB-A8D1-E023133F8E7D}">
+				<File Id="fil8800038BB7286256F441BC38BE470CF7" KeyPath="yes" Source="items\translations\qtlocation_de.qm" />
+			</Component>
+			<Component Id="cmpB4133620D21450DC89F67C5E6629E82A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8041BD9A-0994-40A1-B77F-625633B906BA}">
+				<File Id="filFF8B25A25A6F429169A3FE9A96A2C43A" KeyPath="yes" Source="items\translations\qtlocation_en.qm" />
+			</Component>
+			<Component Id="cmp817C4ADB5A7FADB293FA757FD6F9355F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{33236A3B-0A12-4A27-BEFB-FE11CD6104BD}">
+				<File Id="fil6E91FBC1E6E2B882F97C92C0FCC26613" KeyPath="yes" Source="items\translations\qtlocation_es.qm" />
+			</Component>
+			<Component Id="cmp29498C1E141F457F2E54ADE919B04417" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A2269FEE-6645-48E6-98DD-2ADACDD10604}">
+				<File Id="fil3BA7703B2E6D542D570B8E61A52A21E4" KeyPath="yes" Source="items\translations\qtlocation_fi.qm" />
+			</Component>
+			<Component Id="cmp5E7195B8C9A886356F807B924651EC2D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{2FD9219A-3C91-4616-B50F-B6A926A119C9}">
+				<File Id="fil352EC8E186501F89A41BF2AB95781DF2" KeyPath="yes" Source="items\translations\qtlocation_fr.qm" />
+			</Component>
+			<Component Id="cmp5C20A268768B17E7211CF5B10692521A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6FBB38B9-88A1-4B33-A9A1-853BDE5F7C1E}">
+				<File Id="filE22D66BF48BCA0A06B668CA9938D95F1" KeyPath="yes" Source="items\translations\qtlocation_hr.qm" />
+			</Component>
+			<Component Id="cmp652DA002D04F2BDC32AAA6F7FC9DA5A5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AC9CC8CD-3D61-4849-B738-FB664AD19D15}">
+				<File Id="fil136FAACA9335D834F71D473882633286" KeyPath="yes" Source="items\translations\qtlocation_hu.qm" />
+			</Component>
+			<Component Id="cmp6371C16E2CE3DD473337F49C63BA77F3" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9EBAC5BE-FD60-41C0-88B0-1516E5FE3DB2}">
+				<File Id="fil8A238F21B3A510A38D1FDD72CCEC0B33" KeyPath="yes" Source="items\translations\qtlocation_ko.qm" />
+			</Component>
+			<Component Id="cmp63B2A394C050FC75E46F2891C26E1241" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C2AE537A-CDA1-40F6-BF28-8606669E6E81}">
+				<File Id="filBBADE5129D363E3606175D947B6997C0" KeyPath="yes" Source="items\translations\qtlocation_nl.qm" />
+			</Component>
+			<Component Id="cmp12DBC871182ED2477418AD16AEAECD4F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{72E967F2-5730-40C7-90C4-DA76554967D3}">
+				<File Id="fil1EC17A43AD545A8A94CEE3EAAF2B8764" KeyPath="yes" Source="items\translations\qtlocation_pl.qm" />
+			</Component>
+			<Component Id="cmp2B33290A7D727F9153ADA495669856AB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{E66B0B97-8726-4ADD-B5C7-320C5A122A8B}">
+				<File Id="filC350304F5AFDE8D05D34AA60260597A3" KeyPath="yes" Source="items\translations\qtlocation_pt_BR.qm" />
+			</Component>
+			<Component Id="cmpC8A08DA56F6C0F06A047A9172E273CC5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8CAC2526-4DDD-4203-9EC0-5847F77BCAEE}">
+				<File Id="fil3825806E544167FA2E00EDADB21A4C3C" KeyPath="yes" Source="items\translations\qtlocation_ru.qm" />
+			</Component>
+			<Component Id="cmp889EC097B2BC6A5A06541072BD078C8F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{1B980988-C018-45B5-A6F8-66E3309570B4}">
+				<File Id="fil4BC4C37A207748A507660C0EB52D8419" KeyPath="yes" Source="items\translations\qtlocation_tr.qm" />
+			</Component>
+			<Component Id="cmpD0713A1480666C04EB5A9A847F50B955" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D159BBF1-C07C-451B-A244-93CE12E82E55}">
+				<File Id="fil4C6FA705AF545F5B57363D9846719D31" KeyPath="yes" Source="items\translations\qtlocation_uk.qm" />
+			</Component>
+			<Component Id="cmpB089FE5308DEE26C7889971B434B7489" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{164A5705-C3CC-4D9C-82A5-D858908AC3F9}">
+				<File Id="fil9D1BC320FF3EE90C4F5E146A4A456FC2" KeyPath="yes" Source="items\translations\qtlocation_zh_CN.qm" />
+			</Component>
+			<Component Id="cmpE85D1BDF55771413C862497E6335AD7D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D6900E23-5D17-48E3-B16E-C10FB09B1FD0}">
+				<File Id="fil9B0F2077A0DF5478602113D929C47280" KeyPath="yes" Source="items\translations\qtmultimedia_ar.qm" />
+			</Component>
+			<Component Id="cmpD001ADD2D8498B3A68D9AB06B80E85DA" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{39EF81D8-9755-4E84-B8C1-9D2941A40323}">
+				<File Id="fil29F553E65921C27F8FC8D95A3985C5D9" KeyPath="yes" Source="items\translations\qtmultimedia_bg.qm" />
+			</Component>
+			<Component Id="cmpB72A34B44BF91F9B9380AA28B97BDDD7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{77BBA81A-66B6-4D42-9B3D-95583D8DD1F8}">
+				<File Id="fil6B485FCCD42BB60E2B671087EB3BFE87" KeyPath="yes" Source="items\translations\qtmultimedia_ca.qm" />
+			</Component>
+			<Component Id="cmp985C9C99589F39164C8F6E4C7B0B1B3B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D921A347-7B33-402A-8BD5-741D453CF7B3}">
+				<File Id="fil0F6E11F1044C09884B7A0E22DE975674" KeyPath="yes" Source="items\translations\qtmultimedia_cs.qm" />
+			</Component>
+			<Component Id="cmpDCF9EF1258F0EAB24D19C409227F9F79" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4A69D6BE-3CAC-46AE-A168-373A5E7E7A05}">
+				<File Id="fil4EB10B5E80AC4DC7F4E7383392B47F28" KeyPath="yes" Source="items\translations\qtmultimedia_da.qm" />
+			</Component>
+			<Component Id="cmp8089E3CD78DA6CDC83364FE6A3EB1C56" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FD9CFDC6-E659-4DDB-9054-344B0EA5BF2C}">
+				<File Id="filC4005BCC0B04ADC2CF12D6361DB9D2A0" KeyPath="yes" Source="items\translations\qtmultimedia_de.qm" />
+			</Component>
+			<Component Id="cmpF5DBE337F1912E4F4521E3FC7B09D9C5" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{274971E7-B71D-4686-A277-B804267C0D75}">
+				<File Id="filE019C21BF88502CCB93AC64D0142C869" KeyPath="yes" Source="items\translations\qtmultimedia_en.qm" />
+			</Component>
+			<Component Id="cmp20F62A298904DB45683E63C0B0A13E08" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8FBF22D0-5C8E-479E-81C2-381A87EF0A79}">
+				<File Id="fil98EE9BAF127E5E92F941C647BE19AFA6" KeyPath="yes" Source="items\translations\qtmultimedia_es.qm" />
+			</Component>
+			<Component Id="cmp4729CF71580372690D6E8F3BEAD70984" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AEEFC4C1-2455-4BFF-B4BF-DCB14ECF6AB3}">
+				<File Id="filD92B9DA3EF748BBC38AA09CAA9C9004B" KeyPath="yes" Source="items\translations\qtmultimedia_fa.qm" />
+			</Component>
+			<Component Id="cmp26B3210CC099E25230FE26ABD48B70FB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4C84F38D-EB3B-46CB-B376-75E9013C3EDC}">
+				<File Id="filC5BBACD4304AC9FA571D0219DA0FA22B" KeyPath="yes" Source="items\translations\qtmultimedia_fi.qm" />
+			</Component>
+			<Component Id="cmp885EE6211D1DEF3E8BEB0725C03640BF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{718F4E22-042F-41CB-A365-93AF7F460819}">
+				<File Id="filBCB18A9E37302BE7DEE41C2E177BE58A" KeyPath="yes" Source="items\translations\qtmultimedia_fr.qm" />
+			</Component>
+			<Component Id="cmp9083458C999D9635891E6F373BB5883D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{4C30864E-B749-45CC-804E-0816FDA52284}">
+				<File Id="fil9C50B4262C15B2C3895A8CA76EF90F0F" KeyPath="yes" Source="items\translations\qtmultimedia_hr.qm" />
+			</Component>
+			<Component Id="cmp5B4A37F68824F0AE55DF75E459239D62" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6A80D333-EBE2-44AC-AB94-3BAFC6050E44}">
+				<File Id="filF4A5C6AB6E845778D338B3A75B1B1CBD" KeyPath="yes" Source="items\translations\qtmultimedia_hu.qm" />
+			</Component>
+			<Component Id="cmp26BA212F22B64C950F344BB898AC1DC6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{17F96C5D-7DDD-4899-BDC2-A27A3377BAA1}">
+				<File Id="fil108D4A1C1ADE21301897D48329B2C374" KeyPath="yes" Source="items\translations\qtmultimedia_it.qm" />
+			</Component>
+			<Component Id="cmpDB212A2C069EBBE9229A067B1CBB57F7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3BF15CC5-00A4-42F9-98E4-296402FC4A69}">
+				<File Id="filEEDC128F92FC71AB570D45763ADEE362" KeyPath="yes" Source="items\translations\qtmultimedia_ja.qm" />
+			</Component>
+			<Component Id="cmp3885A6641F0116A3DE75D55B785B400C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{45F42865-7C02-458E-8292-10FF397E5E7F}">
+				<File Id="filE0DAE0D50ABDAF3507E51FCD19D7C342" KeyPath="yes" Source="items\translations\qtmultimedia_ko.qm" />
+			</Component>
+			<Component Id="cmpEA12CF22DA24140C27BC1878E5840FA6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{E7647B1F-5479-4E3B-B763-5F0326949C25}">
+				<File Id="fil92A84F7E6D246FF689B59EFE45D42BDA" KeyPath="yes" Source="items\translations\qtmultimedia_nl.qm" />
+			</Component>
+			<Component Id="cmpC11320EF39459E4E2461DA181F8F053E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{5A511B89-49ED-4A42-AA4B-D1A51681F344}">
+				<File Id="fil5F0B4E2C0147827A58E8266D86852C29" KeyPath="yes" Source="items\translations\qtmultimedia_nn.qm" />
+			</Component>
+			<Component Id="cmpD4B42EF058B81C987BF16D62F163C7E1" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8F14C2C6-302F-469F-9ECD-C10498039E41}">
+				<File Id="fil7F413DA2CF7D87D82C73901C9D8AF167" KeyPath="yes" Source="items\translations\qtmultimedia_pl.qm" />
+			</Component>
+			<Component Id="cmp302B8EF3264CC642C1C2C204528D86FE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{18E9C705-8958-41F7-B469-F7559618514D}">
+				<File Id="filF8656F45C443E1BF7EF58A933A4AD384" KeyPath="yes" Source="items\translations\qtmultimedia_pt_BR.qm" />
+			</Component>
+			<Component Id="cmp968CF26A3E1311219AC0B239C9DE0D95" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0B4D4698-FD8E-4C23-B21A-EC974F45246A}">
+				<File Id="fil49F1A7625F6D8B8DEBC5C29C09EEC7CF" KeyPath="yes" Source="items\translations\qtmultimedia_ru.qm" />
+			</Component>
+			<Component Id="cmp5BE141C242BDA3B9EBADBF475E650B02" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{643B73E8-78E9-4C8B-A741-19B6363655D7}">
+				<File Id="filBF165B785E0A4615C5EB29AD825C74D6" KeyPath="yes" Source="items\translations\qtmultimedia_sk.qm" />
+			</Component>
+			<Component Id="cmp335BE96EBC27218ECC489F37161AE7C6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{447B49B6-77F0-4471-8521-744AEF57E7B3}">
+				<File Id="fil9E7D06BDCB05C01668BF6E4FE0D8120A" KeyPath="yes" Source="items\translations\qtmultimedia_tr.qm" />
+			</Component>
+			<Component Id="cmpC3755CA5F38DA1AD075610725C6B940C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{7150AFDF-67A6-4FD3-9446-8C90A799E1F9}">
+				<File Id="filB413F5FF21B620E3930C801F81C76D8D" KeyPath="yes" Source="items\translations\qtmultimedia_uk.qm" />
+			</Component>
+			<Component Id="cmp1925AA47D281E8FB6B5FF46CB8AFAA67" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{24601728-1A2D-485E-A572-B4126395EAE9}">
+				<File Id="filFCAC5BBC14F81271241FB7442887224E" KeyPath="yes" Source="items\translations\qtmultimedia_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp68C169EAD2526C194C8F45C8985E5201" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{87A25326-2C0D-4824-8F63-63E3D12C8558}">
+				<File Id="fil465E801CD28DC91EF0DC0348FCDD5426" KeyPath="yes" Source="items\translations\qtmultimedia_zh_TW.qm" />
+			</Component>
+			<Component Id="cmpDEF37F0FE2F91E23D52D93DC7CEEFDF4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EC3F130B-6157-480A-81F2-8AAE8E1674E8}">
+				<File Id="fil645AC96B264CFB14C00D2EB3484DC81D" KeyPath="yes" Source="items\translations\qtserialport_de.qm" />
+			</Component>
+			<Component Id="cmp5CDF6DB2C125F9EDC2DA0F320A840E6C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{2AAFE806-1EE1-448D-B5AC-33D2E5332140}">
+				<File Id="filB0C2739EF89995806FEEA5413F61BECB" KeyPath="yes" Source="items\translations\qtserialport_en.qm" />
+			</Component>
+			<Component Id="cmpCFBF3690AA062D18E435E62C40CA4871" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{595EE25D-865E-478E-9343-4856BF960856}">
+				<File Id="fil8B585D6B8FD87EE12F93EA4C66EE0F23" KeyPath="yes" Source="items\translations\qtserialport_es.qm" />
+			</Component>
+			<Component Id="cmp28696D753E655207A30FDF710AE7F493" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{5ACF4760-3753-495B-8AE6-18D723C1C7BD}">
+				<File Id="fil99807138BE199A0351462EB9C099DF1D" KeyPath="yes" Source="items\translations\qtserialport_ja.qm" />
+			</Component>
+			<Component Id="cmp60770B86749FCB75E8C5744673330660" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{2FAEBA0D-22E8-4308-B600-EBBAC4AF7CE5}">
+				<File Id="filD26A672B1B0E6BAAB09A160F34CAB7A4" KeyPath="yes" Source="items\translations\qtserialport_ko.qm" />
+			</Component>
+			<Component Id="cmpE2A5796F143692AE87FF721EDBE7529C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{35CEBDE9-5EEC-4E46-B649-B4F84219BD22}">
+				<File Id="filF992B329FBA83187FCAAFBD909E3F3BD" KeyPath="yes" Source="items\translations\qtserialport_pl.qm" />
+			</Component>
+			<Component Id="cmp45E15B4E43CFE9C9857BB015D3E53601" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3A9EA872-7E6D-4198-B4E0-1B4B733DD4A8}">
+				<File Id="fil0F0E0467BA02E807D84A819898220414" KeyPath="yes" Source="items\translations\qtserialport_ru.qm" />
+			</Component>
+			<Component Id="cmp8D71B45BDFCB8F5F520008F3682A132A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{20FBB38C-ECA6-4036-911B-DC4B54FBE400}">
+				<File Id="fil118B44DF67F6A1DBB80021BE0D68357E" KeyPath="yes" Source="items\translations\qtserialport_uk.qm" />
+			</Component>
+			<Component Id="cmp7DACA80C2271812454E302A205E1D4B0" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{336FCDE4-AD2C-4428-A2DA-41CD99FDBBDC}">
+				<File Id="fil9FEDB8CB733AEF5F330CD4319CFB2047" KeyPath="yes" Source="items\translations\qtserialport_zh_CN.qm" />
+			</Component>
+			<Component Id="cmpE6AEE144211F16929EFA029DAF43915C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9A201E15-5D61-4EFC-A57D-FCC267E7F399}">
+				<File Id="fil521DB31A3E77CF80E7A9692D0B072071" KeyPath="yes" Source="items\translations\qtwebengine_ca.qm" />
+			</Component>
+			<Component Id="cmp6628C25AAD0E587F0B76453BE7D65AFC" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{87B32FAF-6FA3-46CC-9642-0A9EA46738CC}">
+				<File Id="fil20241F6306DB85E64B9AE00B0048979B" KeyPath="yes" Source="items\translations\qtwebengine_de.qm" />
+			</Component>
+			<Component Id="cmp710E066758B28A935D53FCD98D5DE192" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A1AAA12B-3A02-4EC1-AFEF-D79ED7BC1312}">
+				<File Id="fil3BEB37FB6C3D4417B07C5562134227F6" KeyPath="yes" Source="items\translations\qtwebengine_en.qm" />
+			</Component>
+			<Component Id="cmpDAE2DAE31E1B85ABFF0953E620482F49" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C1992415-F981-4D09-99D6-9F06BC27DBF3}">
+				<File Id="filBDAE7CA405F677ACED1F505D03D7731B" KeyPath="yes" Source="items\translations\qtwebengine_es.qm" />
+			</Component>
+			<Component Id="cmp5A63CCDF860AC8E60F7BDB551D255869" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{ED890A22-BA97-4523-B63C-F7DF39E12D70}">
+				<File Id="fil4E2FC41D8C858735C5B4A506B25C6DC4" KeyPath="yes" Source="items\translations\qtwebengine_ko.qm" />
+			</Component>
+			<Component Id="cmpA92D8A52B337E5A99AFCCE8E65B12B42" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{377EA75A-6FAB-42EA-BD6C-BFF90260C5C5}">
+				<File Id="filF65B3D79858D3CCD27B413CAC4E873E1" KeyPath="yes" Source="items\translations\qtwebengine_pl.qm" />
+			</Component>
+			<Component Id="cmp88268B7ACAD93A85FD64788B12B91857" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{74A93831-7748-4CF5-8C59-F5294B7DB50A}">
+				<File Id="filC16D105D5AA7504EC0B8FD73404BCFFB" KeyPath="yes" Source="items\translations\qtwebengine_ru.qm" />
+			</Component>
+			<Component Id="cmp4D43D6676C2DFE4BCDD4EDC2EADBFCCF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AFDD876C-E892-4A90-926D-8D1ED14DD946}">
+				<File Id="fil074E7C48E8615A68E3DF5C51E3D5973C" KeyPath="yes" Source="items\translations\qtwebengine_uk.qm" />
+			</Component>
+			<Component Id="cmp249D2AF47B63BDF5C45E56321B9D9FFB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{895747DF-DCCE-4695-B6C5-557CE2D54CDB}">
+				<File Id="filF917D373EFCD416BC88A312CA4B0BA01" KeyPath="yes" Source="items\translations\qtwebengine_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp46BB1C3F2660AC23B042AE3E0E4C7744" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{25E1B2CC-8201-4BF2-B81B-CA7C928FE710}">
+				<File Id="filE98F8ED37504792CA806767AE7697C83" KeyPath="yes" Source="items\translations\qtwebsockets_ca.qm" />
+			</Component>
+			<Component Id="cmp18895994E29C3942C32C9B1EBC70D3DB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{B128553A-C273-4997-AF78-9969ACE5EB6F}">
+				<File Id="filF1AB77F9E0BB1B3F4B99E311B2B9B21E" KeyPath="yes" Source="items\translations\qtwebsockets_de.qm" />
+			</Component>
+			<Component Id="cmp88A04883610087EEB8E051663D2690B6" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{1C4EBB80-0208-42DB-B7F3-F3531C9C57D4}">
+				<File Id="fil26C32D78B1BB2C3DEA561695C87D3B27" KeyPath="yes" Source="items\translations\qtwebsockets_en.qm" />
+			</Component>
+			<Component Id="cmpFDFBB3BDA667B33B8AFC730571C7BE0A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FC90F3D0-0E6B-4D26-9052-9C3097770B2F}">
+				<File Id="filC1E3E8C849C5CA824457E68F91F9890B" KeyPath="yes" Source="items\translations\qtwebsockets_es.qm" />
+			</Component>
+			<Component Id="cmpAD57182289DC96384255B9D4D0EE15C0" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CD6E2D1E-AEFF-48BC-88BF-D729E0CFEA59}">
+				<File Id="filD8F9BF3673006A43E6CE4B0615FEE62F" KeyPath="yes" Source="items\translations\qtwebsockets_fr.qm" />
+			</Component>
+			<Component Id="cmpD2EE46AFC04A79D26CF7231CA724EE11" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{1412D5DB-89AE-43EF-963A-A6E5F6662161}">
+				<File Id="fil6AAD28A9BF0130966CC4EF85A9DD2419" KeyPath="yes" Source="items\translations\qtwebsockets_ja.qm" />
+			</Component>
+			<Component Id="cmp8B073D4A7D6FA021612A5C37979C6C9D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{41FA83FA-AB6E-4772-8A89-6437B008A390}">
+				<File Id="fil4EA2B472A90A13C528B11B8F16DBA54A" KeyPath="yes" Source="items\translations\qtwebsockets_ko.qm" />
+			</Component>
+			<Component Id="cmp6A2112EAA58F0A2EBB8838E0E342D454" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{17A57AE0-1245-468F-8316-DD35BE8682C0}">
+				<File Id="filFB3816C3884EAF9440BC9D4C8D58014F" KeyPath="yes" Source="items\translations\qtwebsockets_pl.qm" />
+			</Component>
+			<Component Id="cmpF5E98F6123E806874697F18E7D275574" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9F6D6747-C536-4E09-B6CC-D245F3A9A3AF}">
+				<File Id="fil5D2916160C81708219FDC8621E74ECEA" KeyPath="yes" Source="items\translations\qtwebsockets_ru.qm" />
+			</Component>
+			<Component Id="cmp48E1D84C647CCB1283871187CAA9064C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AEEAC970-958B-4D9F-83FC-5163DF949FE0}">
+				<File Id="fil51A43A2747909CBBE885161BBE07B9BC" KeyPath="yes" Source="items\translations\qtwebsockets_uk.qm" />
+			</Component>
+			<Component Id="cmpF3CE7FC6134D66D4CE90D6D037DAF8EF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FE0DA328-A0BB-4114-AF1F-C3C2E44C64DD}">
+				<File Id="fil1A01DC13DC8D9D92E1B6B1898BA5F579" KeyPath="yes" Source="items\translations\qt_ar.qm" />
+			</Component>
+			<Component Id="cmp6475B1DB61508165D733CD4DF26E2D44" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{09451280-1D23-4B99-9932-BBCED420DB0B}">
+				<File Id="fil276755611F9B10E0F0B16A0329808E35" KeyPath="yes" Source="items\translations\qt_bg.qm" />
+			</Component>
+			<Component Id="cmp945266DE1B9E908C568AEC60077412E7" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C7E4B31C-A68D-4221-BDCE-DC2ACFD1FCBC}">
+				<File Id="filBCB45EE1EDBEC50C479DC2A3EA98C716" KeyPath="yes" Source="items\translations\qt_ca.qm" />
+			</Component>
+			<Component Id="cmpF28CA0693171CDD2AA679C08F57F5149" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{20C22FEE-F738-4855-8CC9-4A2924927CFD}">
+				<File Id="filC088037CA2691E60B50586017445AC89" KeyPath="yes" Source="items\translations\qt_cs.qm" />
+			</Component>
+			<Component Id="cmpF68CB8B9671E624CD3B3B72FADECF7EC" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CF1E0888-6312-42C1-B085-A7F56AA3E77A}">
+				<File Id="fil09E14BDB048841A6515D5069E790FB3B" KeyPath="yes" Source="items\translations\qt_da.qm" />
+			</Component>
+			<Component Id="cmpB606A20E9839323D8BC021D0037D4B02" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8DF31C19-6CBD-4F8C-93C3-D1867DA81D38}">
+				<File Id="fil76D3CB54523D5B785F58C0E308ED9360" KeyPath="yes" Source="items\translations\qt_de.qm" />
+			</Component>
+			<Component Id="cmpFE253A4B01A7C4507F64D6EF7D840C90" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{B2D0E1FB-2746-4C36-BAAC-0036CB746DFF}">
+				<File Id="fil20B2FB4C6C0E0208AABF252757D71593" KeyPath="yes" Source="items\translations\qt_en.qm" />
+			</Component>
+			<Component Id="cmp7B2ADC27C95CA6DCDAE86C5D20D7B911" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{7EBC6707-6539-43EE-991E-3B5E21539933}">
+				<File Id="fil8F3E1C9DECFA7E21A5496618AD08F38F" KeyPath="yes" Source="items\translations\qt_es.qm" />
+			</Component>
+			<Component Id="cmpD21B8839E17335D9C35CFFC4DD1B6709" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{DD42995A-2C1B-476B-A79A-6177FEF51116}">
+				<File Id="filB2931CB8E0596E9438CBFD2876E86434" KeyPath="yes" Source="items\translations\qt_fa.qm" />
+			</Component>
+			<Component Id="cmpDD5495105FC1A50D579C23A6F9AB2D9C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{3C327DDF-F22E-4736-99FA-8BFAB861223E}">
+				<File Id="fil1910C120169307B447E427AD7D143CDA" KeyPath="yes" Source="items\translations\qt_fi.qm" />
+			</Component>
+			<Component Id="cmpA7F3FE566195360501EBAA88FE7E268C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AB98BDEE-5155-432D-8111-FC9BA719946F}">
+				<File Id="fil0B149A6EBDF2F8D2D396AE6A1E9EB113" KeyPath="yes" Source="items\translations\qt_fr.qm" />
+			</Component>
+			<Component Id="cmpDD5DD62078DA10D06B2C61ABF78887AE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{73D5C990-E855-47DE-A12D-E90BA4A6921F}">
+				<File Id="filCE8E791056A46F1539121A157A80569D" KeyPath="yes" Source="items\translations\qt_gd.qm" />
+			</Component>
+			<Component Id="cmpC5C4FD8C3D0945AFD41DA3D6B7832516" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{99ABF24D-6D07-4ADF-9990-6701FBF74BF3}">
+				<File Id="fil2010B6EA4E90579B7B60F7B99555EEEA" KeyPath="yes" Source="items\translations\qt_gl.qm" />
+			</Component>
+			<Component Id="cmp481F3650A38CD081F5BC2FF12AB2B668" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{7AB7E153-4989-4C78-A112-820D2289A923}">
+				<File Id="fil627AB198BDB7C0A49591A69BDD5639C8" KeyPath="yes" Source="items\translations\qt_he.qm" />
+			</Component>
+			<Component Id="cmp4166C40F8C3059783AA25CF9222C7BD4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{43A53409-8C40-420A-9E23-81521ED21002}">
+				<File Id="fil5F717B811B48B84D24A4CD51BB3482AE" KeyPath="yes" Source="items\translations\qt_help_ar.qm" />
+			</Component>
+			<Component Id="cmpD513F79D76836EF78D199D1742F562E3" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{154747C1-7F0B-43F6-B820-813156781932}">
+				<File Id="fil86B39352A2158B9AD7A7465186EB42CE" KeyPath="yes" Source="items\translations\qt_help_bg.qm" />
+			</Component>
+			<Component Id="cmp75418196A4FFADBA155528BEBDB1A76A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0C426929-C5A2-47BA-B347-DDD1B6AC848F}">
+				<File Id="fil063F6334AF455737FA21F51D1FD01C22" KeyPath="yes" Source="items\translations\qt_help_ca.qm" />
+			</Component>
+			<Component Id="cmp6FDAFF37CCA811343666AE5D282D8837" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8CC63BF2-D75C-44C1-B688-CF5885759356}">
+				<File Id="fil223BF11F84D838ED39F026DAFE1FB520" KeyPath="yes" Source="items\translations\qt_help_cs.qm" />
+			</Component>
+			<Component Id="cmp24DEDF104BE792989E917DAF08FDA384" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{1B087374-7515-4BD5-8234-651F421FEFA2}">
+				<File Id="fil5D5756AE5A7229F373E1A4EFCCC14E07" KeyPath="yes" Source="items\translations\qt_help_da.qm" />
+			</Component>
+			<Component Id="cmp5642BF77119450820C61E14ADCB27AA1" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{D52234C2-DE7F-4A06-A308-5B767DD503F1}">
+				<File Id="filA3CD10D6C324A2698F2A22EDB6D120A0" KeyPath="yes" Source="items\translations\qt_help_de.qm" />
+			</Component>
+			<Component Id="cmpB6D687623FCA25FC84CD79E673E4F621" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EFC86C5E-C98C-4CA1-A307-ADA52D7E67B1}">
+				<File Id="fil9314641C6489F1C3B946744D666C6FC0" KeyPath="yes" Source="items\translations\qt_help_en.qm" />
+			</Component>
+			<Component Id="cmp8579FEE88B6FFE29A4B2D9CFB54081DB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{ACAA6DFC-04C4-424E-96F7-930DA2F928F7}">
+				<File Id="fil569AF46DA7D94A1FD9DDB90879F3B9B9" KeyPath="yes" Source="items\translations\qt_help_es.qm" />
+			</Component>
+			<Component Id="cmpF30DDD9D4B583D100B38E1806C5C2435" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{EA931247-133B-4549-A59E-79ECA5A5C07E}">
+				<File Id="filD51695008B7C9717295526107BBEA5FC" KeyPath="yes" Source="items\translations\qt_help_fr.qm" />
+			</Component>
+			<Component Id="cmpA7372E021488BFCCB70D47B949960E47" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6B475622-0F00-4CEE-8B9F-0AC99E483EF0}">
+				<File Id="filA8F41BAB25799A5FF1669C1D0843D83F" KeyPath="yes" Source="items\translations\qt_help_gl.qm" />
+			</Component>
+			<Component Id="cmpA558F0B47D84622DB7DC0678C715E75D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{547BE444-00C7-41E7-89A4-4EBF8E46F22C}">
+				<File Id="fil8090ED627F284AF28299ABE20C21C514" KeyPath="yes" Source="items\translations\qt_help_hr.qm" />
+			</Component>
+			<Component Id="cmpECB549FDF4CEA69E021D06867C6918B0" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C4835465-A320-42D9-BA46-8487C0E8E602}">
+				<File Id="filAFF6B82F746A82F34C5EAF6F553DCC60" KeyPath="yes" Source="items\translations\qt_help_hu.qm" />
+			</Component>
+			<Component Id="cmpE6E6B21363F807A12376AD610BDC1AEB" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{E525F8C4-8610-4FFD-A2DF-ABDC71A1EB6F}">
+				<File Id="filF143AF71D034B24FE824684B409014B7" KeyPath="yes" Source="items\translations\qt_help_it.qm" />
+			</Component>
+			<Component Id="cmpCA5556EAC31CCC278C1CBFCAA5ACD12F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6BBB24B1-363A-4733-9E7A-4EF18DF0EB19}">
+				<File Id="filE0B318968CAEFBD159FBA4611B019555" KeyPath="yes" Source="items\translations\qt_help_ja.qm" />
+			</Component>
+			<Component Id="cmpEC9C223C82B8E705D360E34C977F5F73" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CD6155D4-AF2E-417D-840A-B64F077220B1}">
+				<File Id="filEDD3B0EA1401F76D9C6DAA39D34E7F4E" KeyPath="yes" Source="items\translations\qt_help_ko.qm" />
+			</Component>
+			<Component Id="cmp848445BE06A94D1F1190D3468B451C79" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{F7AD1561-1B17-4134-99F9-BBD086EAB7D7}">
+				<File Id="fil368DA2BB7333D11EA3790CF9B4679565" KeyPath="yes" Source="items\translations\qt_help_nl.qm" />
+			</Component>
+			<Component Id="cmpF9390E6A69FC9A2B9444000BE4EB3C89" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{AE9991BA-729B-483D-9AA1-A09BD88EEB04}">
+				<File Id="filF7CE82B0E0604A8F5076112A1AC7046A" KeyPath="yes" Source="items\translations\qt_help_nn.qm" />
+			</Component>
+			<Component Id="cmp78F637D3F8D6C0B3DF38BF9D50CF302E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{549F54EC-0C03-488D-84BF-0F8D6352574B}">
+				<File Id="fil64968A526B0D699DFDEB479BF2775BFC" KeyPath="yes" Source="items\translations\qt_help_pl.qm" />
+			</Component>
+			<Component Id="cmpB0CB86D4338F5FFE82F30C081C5D5C2B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{32272C32-D68F-4688-AE09-67A80EA68533}">
+				<File Id="filBA5D575229FCFBA28D6D6DFC87C17C61" KeyPath="yes" Source="items\translations\qt_help_pt_BR.qm" />
+			</Component>
+			<Component Id="cmpA04E09CB51EA4CCE8514319A32FADBEF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{B436B954-676A-4779-BCFA-A0263838FE8A}">
+				<File Id="fil28915CF4AE416BF45955659198A772F6" KeyPath="yes" Source="items\translations\qt_help_ru.qm" />
+			</Component>
+			<Component Id="cmp8B4756B83CB09D38C99335E932422B1F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{5D93E3D8-F145-4FFD-A509-20F9239F16F0}">
+				<File Id="filAAA7A15380CAD1C111D54EFCCFD4B671" KeyPath="yes" Source="items\translations\qt_help_sk.qm" />
+			</Component>
+			<Component Id="cmp122FE1493BBC926CF6FB350926E711DD" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C0744B80-0CC1-408F-BEFC-F2E7904F7FDC}">
+				<File Id="filA0ED11DECBAF6EEF3383BFC29151F5E1" KeyPath="yes" Source="items\translations\qt_help_sl.qm" />
+			</Component>
+			<Component Id="cmp64A1D87B8D405901D0CE9AA6B0E758EE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{754A4270-1FA4-4CE2-9F05-B2956398E943}">
+				<File Id="fil391322DEC5CFF6A234ECCE7B436D69B1" KeyPath="yes" Source="items\translations\qt_help_tr.qm" />
+			</Component>
+			<Component Id="cmp8DB1FDCF14BBD8B91A695F32833A38A4" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{0228E3C3-EB7F-4CD6-8D4B-CAA7BD5CA87F}">
+				<File Id="fil7C6995349BDB158D900E6963F05321C0" KeyPath="yes" Source="items\translations\qt_help_uk.qm" />
+			</Component>
+			<Component Id="cmp88D6816CD5D4596B095F903348E86B83" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{FE7AC52C-3D9D-4FF4-BD39-9895BEF36FF6}">
+				<File Id="fil42ABFC46298AE415B171078EF1CAD1C8" KeyPath="yes" Source="items\translations\qt_help_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp453818D09F2F22369CF46B471BA95779" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8EC6E95D-2280-493D-9F93-436D3A95E063}">
+				<File Id="filF3570E0399CA5D03997A15D5A3C02F97" KeyPath="yes" Source="items\translations\qt_help_zh_TW.qm" />
+			</Component>
+			<Component Id="cmp43D2392DA5BEE23B96027C84F26C354B" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{8D5D9FBE-D834-4028-9561-2010A5741938}">
+				<File Id="fil6A50090FBDB55A1F2D6FC165AED30533" KeyPath="yes" Source="items\translations\qt_hr.qm" />
+			</Component>
+			<Component Id="cmpA50522D218405951F89D17D119351B18" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C6BA32A5-0670-410B-8090-63F7F54280D0}">
+				<File Id="fil1F005D15C5518B643D663B9888357886" KeyPath="yes" Source="items\translations\qt_hu.qm" />
+			</Component>
+			<Component Id="cmpA09A8F8BA08597FD63B9ED1BEA63F305" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{746FA0AA-D2C7-418B-A898-E72371D4BE41}">
+				<File Id="filBBE4D6D16BE762C49B9A5486A4722B95" KeyPath="yes" Source="items\translations\qt_it.qm" />
+			</Component>
+			<Component Id="cmpE69EA7F5DEA3E1EC347D090F26A99637" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{56B841DA-C34A-4406-9337-416E0DC13655}">
+				<File Id="fil84A2E34B70FEA2A44EE5F24D4E855A90" KeyPath="yes" Source="items\translations\qt_ja.qm" />
+			</Component>
+			<Component Id="cmp873306C0DE34EE51EC281ED99FCE1812" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C28D5C85-9313-4B15-AEBE-E688FE836148}">
+				<File Id="filD23618C759CFE4AD60746F98E64031CF" KeyPath="yes" Source="items\translations\qt_ko.qm" />
+			</Component>
+			<Component Id="cmp9A6B9AE5D146B768F10CF2B92F3A7C0D" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{48F12B36-93EE-4714-93FC-DDA65D1A8F37}">
+				<File Id="filAB4098B9FB7CD8B3D9168167C4107E1F" KeyPath="yes" Source="items\translations\qt_lt.qm" />
+			</Component>
+			<Component Id="cmpE194A05F79896600A44AA9AB26616C57" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{93E6C71E-601C-46AD-A267-859B3A0586BB}">
+				<File Id="fil21E2B0C50D76EB2158D6E98AC367C5A7" KeyPath="yes" Source="items\translations\qt_lv.qm" />
+			</Component>
+			<Component Id="cmp3AE4AE121A7E9EE253808A7FACE5B6AF" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{7311D869-926A-4748-B385-695E6D2D0CAB}">
+				<File Id="filB823C966C65A729EBEECF2299BEA3A99" KeyPath="yes" Source="items\translations\qt_nl.qm" />
+			</Component>
+			<Component Id="cmp912F55B90E41A22142DF1218C5ACFCCE" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{94D3E870-0710-4415-8D20-6416BDC442DE}">
+				<File Id="fil272CAA9887B44718C89860882EE5F715" KeyPath="yes" Source="items\translations\qt_nn.qm" />
+			</Component>
+			<Component Id="cmp77E77384BA8D9763F71053197AF2341C" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{7529B98F-70B9-40F3-B520-37F3687113B1}">
+				<File Id="fil2BE4A53065FD33357D5CD56A6F1DFA6A" KeyPath="yes" Source="items\translations\qt_pl.qm" />
+			</Component>
+			<Component Id="cmp5DD670EB7A0B425E88B2306895DE1605" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{999C6B80-14AB-4306-A368-9869FCB17B77}">
+				<File Id="fil9AC9963C6967259CE41153FA3A9E59CE" KeyPath="yes" Source="items\translations\qt_pt_BR.qm" />
+			</Component>
+			<Component Id="cmp70A913FB9EB8575D8F010B5F4C89474A" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{2B16CECB-63C2-4CDE-8366-F94AB04FEC34}">
+				<File Id="fil70FC3547DA306834184E7B0F6812F17B" KeyPath="yes" Source="items\translations\qt_pt_PT.qm" />
+			</Component>
+			<Component Id="cmpA1E1BAE253FF81ECCBCF863E965B699F" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{CA3E94B7-A27D-4EFD-AC6C-D6AEF285D51D}">
+				<File Id="fil5CA4DBD6BCBA5BCCBE2887A0B8740559" KeyPath="yes" Source="items\translations\qt_ru.qm" />
+			</Component>
+			<Component Id="cmpC84C89EB154B67E483B44C2EEE09974E" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{C8D8CA9A-0CAF-466C-8EC9-6063CA6650EF}">
+				<File Id="filB850ADC7F23EA7D28A7A376032FD77CF" KeyPath="yes" Source="items\translations\qt_sk.qm" />
+			</Component>
+			<Component Id="cmpBAF439CD45B6C175C930CFBF20B3EF97" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{BA27D8FD-164D-4ED7-BA76-2C172548B785}">
+				<File Id="fil36B0CDC6388A0A9EEA691F4F41E15872" KeyPath="yes" Source="items\translations\qt_sl.qm" />
+			</Component>
+			<Component Id="cmpF97920D925C03823462FE379B06B80A8" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{85FC7C07-55DD-4C7A-93F6-6350341E775D}">
+				<File Id="filB277A73F02C047A89DF570670F1A5678" KeyPath="yes" Source="items\translations\qt_sv.qm" />
+			</Component>
+			<Component Id="cmp74D9855279ACE9DACB7951718A902154" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{9A330BD3-5F04-409C-80DF-B91752679628}">
+				<File Id="filD2ADA6293A3F603519BD43F57A4F44B0" KeyPath="yes" Source="items\translations\qt_tr.qm" />
+			</Component>
+			<Component Id="cmpAB19D7F1204AB8689F9305CA20017606" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{A15B0D3C-8AEB-4F5D-BCF5-27895672091B}">
+				<File Id="fil2339578BBAEBC351A673A73F46F01D4F" KeyPath="yes" Source="items\translations\qt_uk.qm" />
+			</Component>
+			<Component Id="cmp6BF9C18DC365BBC9FEC2C5A0B83A6C11" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{36BB58CA-A8C4-43D2-BFE2-4830589E4F4A}">
+				<File Id="filC75F9E75D7711B45F5753F098A52BE05" KeyPath="yes" Source="items\translations\qt_zh_CN.qm" />
+			</Component>
+			<Component Id="cmp89F2AF8D8BBFADEF8AF63235072D3B68" Directory="dir83B71B3CD0F995692A90933430D9448A" Guid="{6E26134F-66A6-41AF-A31D-5B8022C2E323}">
+				<File Id="filCEACDFF6ABF72E97CEC05D47C488E359" KeyPath="yes" Source="items\translations\qt_zh_TW.qm" />
+			</Component>
+			<Component Id="cmpC530B0841D630B1E232A23B7691600FF" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{E31872DE-35E8-41CB-8A71-A849EF845C85}">
+				<File Id="fil3E1443822D2322443F6092ACCD9917F5" KeyPath="yes" Source="items\translations\qtwebengine_locales\am.pak" />
+			</Component>
+			<Component Id="cmpDF54BDD686B23E8A9F0F963E732CC840" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{C01814C9-E9A2-47D1-AA48-903A7BD2D595}">
+				<File Id="fil17EF8F96B02465892309AB2EA2C93E1B" KeyPath="yes" Source="items\translations\qtwebengine_locales\ar.pak" />
+			</Component>
+			<Component Id="cmpD4404D30D8BA450DB0E851DE9581F565" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{F71395A0-4D11-47C2-AA93-390CB8BE6425}">
+				<File Id="filF4AE07C391DA36E0952CB87099FA890D" KeyPath="yes" Source="items\translations\qtwebengine_locales\bg.pak" />
+			</Component>
+			<Component Id="cmpA22C29BFAD0778A96E35F36EC0F550C8" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{A59BBA27-0076-4E60-A367-48ED725A8BBD}">
+				<File Id="fil463646365BFD9A811B26637777761E85" KeyPath="yes" Source="items\translations\qtwebengine_locales\bn.pak" />
+			</Component>
+			<Component Id="cmpA41FF568B48738FF9E60F6E326BD9BD8" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{A7DCF8BA-EDAB-430A-B157-B5703B2E9C73}">
+				<File Id="fil5FDD247E9222AB122F4C8C13736B4D78" KeyPath="yes" Source="items\translations\qtwebengine_locales\ca.pak" />
+			</Component>
+			<Component Id="cmp72CE3D72DD692D4A0DD9BBF342A08FD3" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{4EE16D62-9D82-4765-B451-A1E6C9F56559}">
+				<File Id="fil7E85E3DE07711A4DECE115469A1631BD" KeyPath="yes" Source="items\translations\qtwebengine_locales\cs.pak" />
+			</Component>
+			<Component Id="cmpBC5DF9280DE606D559CB8FBE2CE0680C" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{EE18BB0B-2B35-4D20-B72B-797533A91FE4}">
+				<File Id="filAFFD4B2E26A6A3C561D913B95133797F" KeyPath="yes" Source="items\translations\qtwebengine_locales\da.pak" />
+			</Component>
+			<Component Id="cmpD13A9188EECF9BCDF3042CCE880E2D84" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{2B76FADB-8774-4BA1-8074-7553D93054AF}">
+				<File Id="filD5FC11B455050C93F89401EA0B2DAF3F" KeyPath="yes" Source="items\translations\qtwebengine_locales\de.pak" />
+			</Component>
+			<Component Id="cmpC4EAB8FEC6AF4DD7DC973D8DF36A8973" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{1AC4DD49-E8A8-47A6-AF60-B770F8234593}">
+				<File Id="fil717511F1C8C7CEB50994B3D71A1BBD48" KeyPath="yes" Source="items\translations\qtwebengine_locales\el.pak" />
+			</Component>
+			<Component Id="cmpA310EC093EF2D082CD2078097983669C" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{8EC8AACE-BB55-4B8D-9FF3-BD7E4D6B426B}">
+				<File Id="fil5FC4072CEF93BEB4B7AABED37C6ECD47" KeyPath="yes" Source="items\translations\qtwebengine_locales\en-GB.pak" />
+			</Component>
+			<Component Id="cmpC079E5B29F4FFD5D26592CFB1CE95C3E" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{3D3B5979-B62A-4D1B-BB9A-DF1CB8785099}">
+				<File Id="filDCEBE4BC55CE5C159B032375396F2671" KeyPath="yes" Source="items\translations\qtwebengine_locales\en-US.pak" />
+			</Component>
+			<Component Id="cmp50FF18538EF5D54B9E473762164BCD98" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{4FA62A8A-FEAE-464A-81F9-D52CD1FE0FDC}">
+				<File Id="filF1A26A3750A3CBFF440EB37B160EBB2D" KeyPath="yes" Source="items\translations\qtwebengine_locales\es-419.pak" />
+			</Component>
+			<Component Id="cmp6F5C14AE1B9EF5F96E0FEB1BB9616D8F" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{6E2BD2F9-B85E-4A86-B1EE-E80FD1FE4880}">
+				<File Id="fil2D7E26D13233B8568F06663362CC18DB" KeyPath="yes" Source="items\translations\qtwebengine_locales\es.pak" />
+			</Component>
+			<Component Id="cmp71F901C77B90F69FBAD1FDB5A17895F6" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{C5F8D29B-C456-4BB5-93E8-CD5FB6212854}">
+				<File Id="fil02471600EC25CD8C621BDC605D4B75F2" KeyPath="yes" Source="items\translations\qtwebengine_locales\et.pak" />
+			</Component>
+			<Component Id="cmp485E1F6CC7D240446305705AA6CA575D" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{65B4AB23-A9EE-45D9-8C27-DA8DA6FCDAAA}">
+				<File Id="filDF163193D718743ABE530D85489563F5" KeyPath="yes" Source="items\translations\qtwebengine_locales\fa.pak" />
+			</Component>
+			<Component Id="cmp745318C636BAC31E5EDF2F8449E9C6FB" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{E79F0EF7-EE6B-4778-B22C-280176F864E2}">
+				<File Id="filC302A1A4A97EC6FFCEBF239A0D264396" KeyPath="yes" Source="items\translations\qtwebengine_locales\fi.pak" />
+			</Component>
+			<Component Id="cmp75E1BED86F0802B1AFBA75DDDCC85458" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{4EBBA7AC-AB90-4909-9430-0A7E3AC285A4}">
+				<File Id="filC113259AE40DB98307EE1C35E8A5F756" KeyPath="yes" Source="items\translations\qtwebengine_locales\fil.pak" />
+			</Component>
+			<Component Id="cmpBE2EB3B3CC095EFD3936658784647D76" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{BC3F05E5-56C9-4B41-AAD3-BC378DE9AA37}">
+				<File Id="fil06CF1FEBF00272894B539074003038C1" KeyPath="yes" Source="items\translations\qtwebengine_locales\fr.pak" />
+			</Component>
+			<Component Id="cmp0A417CF4F338566B6ED0218A4DB830B8" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{68EAA294-4CC8-462B-B174-A9B60357D4EF}">
+				<File Id="fil9C3DC86000C31BB2833A3F7ABBBC7AE6" KeyPath="yes" Source="items\translations\qtwebengine_locales\gu.pak" />
+			</Component>
+			<Component Id="cmpA26AE97213791BF275F3411858FD25D2" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{F9003880-892B-4AE3-815E-824F9E9BC43F}">
+				<File Id="filE0C34E59C696F631986820C712C72631" KeyPath="yes" Source="items\translations\qtwebengine_locales\he.pak" />
+			</Component>
+			<Component Id="cmp8DC8F45138F36305F78A74221C8472C6" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{E54D30FF-42E2-4EE5-A0D5-20CD1F60E591}">
+				<File Id="filD27892B1ED3B06DB2AE274D8FFDB7183" KeyPath="yes" Source="items\translations\qtwebengine_locales\hi.pak" />
+			</Component>
+			<Component Id="cmp11A1EC8CE66C46F3D37964B4EFD2BB6C" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{2523E50E-2D39-45C3-B460-C66746899658}">
+				<File Id="fil092022638B8E9BA5CC7FB0880A0AC55B" KeyPath="yes" Source="items\translations\qtwebengine_locales\hr.pak" />
+			</Component>
+			<Component Id="cmpBC41359FF8770A3F1EE473E5D03D2792" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{395F5669-5F85-4697-954F-33E06D597F2C}">
+				<File Id="filFD34FBF0DF5A0125C2D5DEEBF7C8B5D2" KeyPath="yes" Source="items\translations\qtwebengine_locales\hu.pak" />
+			</Component>
+			<Component Id="cmp9FF4923FE55BA4EAAA3592EB485779E3" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{3E3A0295-B7F8-4BDB-AE70-2606E98C73A5}">
+				<File Id="filAFEB9826C9A3DDFFF0DF08CF030490D1" KeyPath="yes" Source="items\translations\qtwebengine_locales\id.pak" />
+			</Component>
+			<Component Id="cmpBB8F0323DDC20269AF78C6BA03881E98" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{A331DB9E-1BFE-4F7C-A075-75455DD02E72}">
+				<File Id="filDCC1A7AA972A46BCB3DA53C8AE6B71CF" KeyPath="yes" Source="items\translations\qtwebengine_locales\it.pak" />
+			</Component>
+			<Component Id="cmpB9F95CCC195A449861F71B23071D50C1" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{CCBE2C7F-E022-489D-9C36-6CDF23294BAC}">
+				<File Id="filFEC1013227D04F3636602602731470DD" KeyPath="yes" Source="items\translations\qtwebengine_locales\ja.pak" />
+			</Component>
+			<Component Id="cmp3529ABEE247C6C46C4AF493DBAAFA851" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{62D8C7C2-E4E6-4439-8D01-9F7DD61A11A3}">
+				<File Id="filBED0B278AE6DD1F69A822F023BF08BBD" KeyPath="yes" Source="items\translations\qtwebengine_locales\kn.pak" />
+			</Component>
+			<Component Id="cmpE948817490B965E5C63C634450ECC0F0" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{AD8658E5-8647-4C00-895A-BD2B7B2AB8BE}">
+				<File Id="filD89740AC8A83D9017210E01E2E438376" KeyPath="yes" Source="items\translations\qtwebengine_locales\ko.pak" />
+			</Component>
+			<Component Id="cmp76D1CE54969A84C7B5EE0B7536CDB4FE" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{757AE711-9A12-4515-B839-5BCCCC394724}">
+				<File Id="fil3A087BAE4346BED3B86CB2C64E431907" KeyPath="yes" Source="items\translations\qtwebengine_locales\lt.pak" />
+			</Component>
+			<Component Id="cmp7F6048D2954AE074E9DA36A80FB78865" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{76A0AC3C-2D0E-499A-BD21-B8A2F0E02D6F}">
+				<File Id="fil7FEBAF1C4AD97DE1633A992A14150C61" KeyPath="yes" Source="items\translations\qtwebengine_locales\lv.pak" />
+			</Component>
+			<Component Id="cmp9DC68CA6040FC0F16A80268B53E71574" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{4D15B7F8-6C8B-4CEA-AEA4-599C429FBC41}">
+				<File Id="fil12D9820E4E50AE25368A67AB62926C9B" KeyPath="yes" Source="items\translations\qtwebengine_locales\ml.pak" />
+			</Component>
+			<Component Id="cmp02DFD3B3A1E49D786A0540C56EDDE146" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{434A729B-0904-438C-AFA2-0D762C0E73D0}">
+				<File Id="filBA9C964124CDD7C0E38F6E83497C1D1F" KeyPath="yes" Source="items\translations\qtwebengine_locales\mr.pak" />
+			</Component>
+			<Component Id="cmpB2D304655A83B027BE29CA92D1AF0171" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{B5FC35CE-14E6-4865-B7FD-DB22D4E4621E}">
+				<File Id="fil5F10AE93E3706D5A02B7FDB91C56FC5E" KeyPath="yes" Source="items\translations\qtwebengine_locales\ms.pak" />
+			</Component>
+			<Component Id="cmp2BC64C8992AD57C1E9EA620009FB984E" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{936112C0-E622-49EC-8EF2-BBD17D6A890B}">
+				<File Id="fil8C18FB080C17D2697B564DE1F2850F16" KeyPath="yes" Source="items\translations\qtwebengine_locales\nb.pak" />
+			</Component>
+			<Component Id="cmp4897D7F54D0A618BE450D9C55935B863" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{B3E71E47-B337-4693-953E-997A13F9E497}">
+				<File Id="fil47A41C89A488C4E95715E0371CE8F37D" KeyPath="yes" Source="items\translations\qtwebengine_locales\nl.pak" />
+			</Component>
+			<Component Id="cmp9E8E830E6E88D39F852386DA59AD45A0" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{3A0F07FA-CA40-4F6D-ACD8-92A440A51ADF}">
+				<File Id="filBE5F627428F8B100243297002815FF7B" KeyPath="yes" Source="items\translations\qtwebengine_locales\pl.pak" />
+			</Component>
+			<Component Id="cmpD6F9268ECB85A89571F41ED11E480B20" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{991C6AC2-06EF-42F3-9927-8B701216AC16}">
+				<File Id="fil22C6CAEE8F3B6CCB47A3A18251888A94" KeyPath="yes" Source="items\translations\qtwebengine_locales\pt-BR.pak" />
+			</Component>
+			<Component Id="cmp2D1814FEE7BDE0694A02A324BCE8A1E3" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{88A07B3A-1BDE-4A3B-8282-21AB0B3EB30A}">
+				<File Id="filD2DA2569C9D1BC938D03C3F3A8628D9E" KeyPath="yes" Source="items\translations\qtwebengine_locales\pt-PT.pak" />
+			</Component>
+			<Component Id="cmpE554C0657004EF1F076B850203039AD8" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{7BFA545F-DB63-43C1-9A25-1AD6E89E1F4E}">
+				<File Id="fil4C5CF1FADB9097C012BE80E1BDD1AC93" KeyPath="yes" Source="items\translations\qtwebengine_locales\ro.pak" />
+			</Component>
+			<Component Id="cmp86C22EA9CD43A7CE4AFB2EA044042D7C" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{AC1A7B74-2857-43BE-BCA1-8C594CE8BF7A}">
+				<File Id="filF1D219546B0D4F6CA9183DC073A9374B" KeyPath="yes" Source="items\translations\qtwebengine_locales\ru.pak" />
+			</Component>
+			<Component Id="cmp94D44790A21FFBD912D216BB4A17A5F2" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{F38C3F03-3C03-47EB-B085-4F2D71EE30EE}">
+				<File Id="filE37F129F41373749050C7EA49FD46360" KeyPath="yes" Source="items\translations\qtwebengine_locales\sk.pak" />
+			</Component>
+			<Component Id="cmp005DECBC5EAED9159AA52E74C0631375" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{724B4706-B380-445A-9FFD-C92FA2982DDA}">
+				<File Id="fil1593E6D76C5A4CEE1DF8D395389A3EAC" KeyPath="yes" Source="items\translations\qtwebengine_locales\sl.pak" />
+			</Component>
+			<Component Id="cmp545044F3837EF4825982505249D20251" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{C613F6E0-615F-4055-B934-D9937479B0E4}">
+				<File Id="fil9B0FDCD7271A9E2FACC7B378EF5A0B8B" KeyPath="yes" Source="items\translations\qtwebengine_locales\sr.pak" />
+			</Component>
+			<Component Id="cmp51157B07497695C4477352316FC711FD" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{94D2C4D1-CC01-44E6-911B-BBF7D0F08619}">
+				<File Id="fil3123FED78665AAE82A5169B6D3C43EA7" KeyPath="yes" Source="items\translations\qtwebengine_locales\sv.pak" />
+			</Component>
+			<Component Id="cmpE496E902B4C9CE7A3DE71D60D7C8445D" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{6A38E632-696D-45CC-8BC6-B6657D5DFAEF}">
+				<File Id="filA6FAF8142F200E01E90CC0063EA97DD0" KeyPath="yes" Source="items\translations\qtwebengine_locales\sw.pak" />
+			</Component>
+			<Component Id="cmp5EE579876BD30DE4DB6D583E50CE238C" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{A676880F-0107-47A0-8726-C4E5866F50B6}">
+				<File Id="filDA0F466D14840C9964942E590F3C46B7" KeyPath="yes" Source="items\translations\qtwebengine_locales\ta.pak" />
+			</Component>
+			<Component Id="cmpA0CD97D9B9B6CD913D61DF013F269C13" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{C813798C-138C-494B-B357-25E1C9A2121E}">
+				<File Id="filF799F9FC94A4560EBEC361D846466874" KeyPath="yes" Source="items\translations\qtwebengine_locales\te.pak" />
+			</Component>
+			<Component Id="cmp55D7BF42E765A92A5B32E6A88A29A97B" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{927A368D-252B-4EF8-A6E9-67F4C8433BBF}">
+				<File Id="fil836E59CC3D4134D928083D4EEF4F4C05" KeyPath="yes" Source="items\translations\qtwebengine_locales\th.pak" />
+			</Component>
+			<Component Id="cmpC9BF59638243A23DACC0BB5312780576" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{9722630D-E1F5-4559-A501-4DE8ED6A8047}">
+				<File Id="fil1B87D9723A6BB8A822C2BAED1AF038D1" KeyPath="yes" Source="items\translations\qtwebengine_locales\tr.pak" />
+			</Component>
+			<Component Id="cmpC7E77A9574BEB2CFEE8A4F5270E8937A" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{BB687377-D8D7-4D91-9D3D-3905FF630E01}">
+				<File Id="filF001B020BD78FB407E72D19A8F869CD9" KeyPath="yes" Source="items\translations\qtwebengine_locales\uk.pak" />
+			</Component>
+			<Component Id="cmp45D3012A33552E0417B7267D7726D52C" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{D555C301-8935-4DCA-A917-80A2A0BA245A}">
+				<File Id="filE6616F49978351CFE7237CA71987FD66" KeyPath="yes" Source="items\translations\qtwebengine_locales\vi.pak" />
+			</Component>
+			<Component Id="cmp8BD4CFA48DE180B06BD4F961971CEA08" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{0607A0C6-9375-4160-BEB5-319B5F498039}">
+				<File Id="fil27DF3FC3CE5AAFEA3F95DF09B5305588" KeyPath="yes" Source="items\translations\qtwebengine_locales\zh-CN.pak" />
+			</Component>
+			<Component Id="cmp650EB4080C3E3824916DA5B2C3F85B82" Directory="dir41551804DF4AF4E462181B72139D8F14" Guid="{FC38AEFD-83F7-4224-ADDD-EB19B28C1553}">
+				<File Id="fil1A8569A902EB1433C5EFA61FA8E6DAF1" KeyPath="yes" Source="items\translations\qtwebengine_locales\zh-TW.pak" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+	<Fragment>
+		<DirectoryRef Id="dir83B71B3CD0F995692A90933430D9448A">
+			<Directory Id="dir41551804DF4AF4E462181B72139D8F14" Name="qtwebengine_locales" />
+		</DirectoryRef>
+	</Fragment>
+	<Fragment>
+		<DirectoryRef Id="dir655E50E5ABDD0F7183A54CFA0F822CE2">
+			<Directory Id="dir72722C2B48D499E116A40DF094DE88C0" Name="platforms" />
+		</DirectoryRef>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="ApplicationProgramsFolder">
+			
+			<Component Id="ApplicationShortcut" Guid="{3859CBE8-F1E8-4428-A140-FD35D4CDDD47}">
+				<Shortcut Id="shortcut"
+						  Name="BAHA"
+						  Description="BAHA"
+						  Target="[#fil2D3028BACD37718A4C5E3DDA813A09D1]"
+						  WorkingDirectory="INSTALLFOLDER"/>
+				<RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+				<RegistryValue Root="HKCU" Key="Software\MyCompany\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+		</DirectoryRef>
+		
+	</Fragment>
+</Wix>
