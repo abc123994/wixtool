@@ -1,0 +1,2 @@
+# wixtool
+package tool example
